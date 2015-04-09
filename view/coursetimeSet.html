@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/yahoo-reset.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/dialog.css"/>
+    <link rel="stylesheet" href="../assets/css/base.css"/>
+    <link rel="stylesheet" href="../assets/css/core.css"/>
+</head>
+<body>
+<!--user-menu-->
+<div class="user-menu yui3-g">
+    <div class="user-menu-hd yui3-u">
+        <a href="" class="yui3-u easyui-menubutton" data-options="menu:'#user-menu-content'">ASDFSDF<i class="fa fa-caret-down fa-blue fa-3x"></i></a>
+        <div id="user-menu-content" class="menu-content" style="position: absolute;">
+            <div class="user-menu-content-bd">
+                <i class="fa fa-caret-up fa-2x"></i>
+                <ul>
+                    <li>
+                        <a href="../message.html">消息</a>
+                    </li>
+                    <li>
+                        <a href="../bind.html">绑定</a>
+                    </li>
+                    <li>
+                        <a href="../userinfo-set.html">设置</a>
+                    </li>
+                    <li>
+                        <a href="">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--user-menu end-->
+
+<!--pub-head-->
+<div class="pub-head yui3-g">
+    <div class="yui3-u pub-head-logo">
+        <a class="logo" href=""></a>
+    </div>
+    <div class="yui3-u pub-head-main">
+        <!--cmspages-head-->
+        <div class="cmspages-head yui3-g">
+            <div class="cmspages-head-menu yui3-u" >
+                <!--<img class="yui3-u" src="http://lorempixel.com/48/48/cats/" alt=""/>-->
+                <label class="yui3-u">东田教育教务管理系统</label>
+                <!--<i class="fa fa-angle-down fa-3x"></i>-->
+            </div>
+        </div>
+        <!--cmspages-head end-->
+    </div>
+</div>
+<!--pub-head end-->
+
+<div class="cmspages">
+    <div class="cmspages-layout yui3-g">
+        <div class="cmspages-content-menu yui3-u">
+            <div class="cmspages-content-menu-bd">
+                <ul>
+                    <li>
+                        <a class="on" href="javascript:void(0)">班级设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">授课教师设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课时设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cmspages-content yui3-u">
+            <div class="course-info course-time">
+                <div class="course-info-hd">
+                    <a class="yui3-u cp-button nyroModal" href="#course-time">设置上课时间</a>
+                    <a class="yui3-u cp-button nyroModal" href="#public-time">新增公共时间</a>
+                    <a class="yui3-u cp-button nyroModal" href="#publictime-delete">删除公共时间</a>
+                </div>
+                <div class="course-info-bd">
+                    <table class="pub-table">
+                    <thead>
+                    <tr>
+                        <th width="20%"></th>
+                        <th>周一</th>
+                        <th>周二</th>
+                        <th>周三</th>
+                        <th>周四</th>
+                        <th>周五</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <p>第一节</p>
+                            <p>08:00-09:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第二节</p>
+                            <p>09:00-10:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第三节</p>
+                            <p>11:00-12:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第四节</p>
+                            <p>11:00-12:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第五节</p>
+                            <p>12:00-13:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第六节</p>
+                            <p>13:00-14:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="add-course" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>新增课程</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog add-course">
+                <ul class="cmspages-dialog-bind-account">
+                    <li class="yui3-g">
+                        <label class="yui3-u">课程名称：</label>
+                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">年级：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">一年级</option>
+                            <option value="">二年级</option>
+                            <option value="">三年级</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">学段课程：</label>
+                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">课程等级：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">国家课程</option>
+                            <option value="">国家课程</option>
+                            <option value="">国家课程</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">周课时数：</label>
+                        <input type="number" class="easyui-numberbox easyui-validatebox" name="hour" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u"></label>
+                        <input class="yui3-u cp-button" type="submit" value="新增">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--coursetime-->
+<div id="course-time" style="position: absolute;top: -9999px">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>设置上课时间</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-time">
+                <ul class="yui3-g">
+                    <li class="yui3-u">
+                        <span>每周上课天数：</span>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周一</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周二</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周三</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周四</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周五</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周六</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>周日</label>
+                    </li>
+                </ul>
+
+                <table id="dg" class="easyui-datagrid" title="" style="width:498px;height:240px">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'starttime',width:210,align:'right',editor:{type:'timespinner',options:{required:true}}">上课时间</th>
+                            <th data-options="field:'endtime',width:210,align:'right',editor:{type:'timespinner',options:{required:true}}">下课时间</th>
+                            <th data-options="field:'ck',checkbox:true"></th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <div class="toolbar" id="tb" style="height:auto;">
+                    <a href="javascript:void(0)" class="addteach yui3-u cp-button cp-button-grev"><i class="fa fa-plus-square fa-1x"></i>新增</a>
+                    <a href="javascript:void(0)" class="removeteach yui3-u cp-button cp-button-grev"><i class="fa fa-minus-square fa-1x"></i>删除</a>
+                    <a href="javascript:void(0)" class="saveteach yui3-u cp-button cp-button-grev"><i class="fa fa-floppy-o fa-1x"></i>保存修改</a>
+                </div>
+                <button class="cp-button getData">getData</button>
+                <div style="display: none"><input class="easyui-timespinner"></div>
+            </div>
+        </div>
+        <div class="cmspages-dialog-ft">
+            <input class="cp-button" type="submit" value="确定"/>
+        </div>
+    </div>
+</div>
+<!--coursetime end-->
+
+<!--publictime-->
+<div id="public-time" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>新增公共时间</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog public-time">
+                <ul class="cmspages-dialog-bind-account">
+                    <li class="yui3-g">
+                        <label class="yui3-u">名称：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">早读</option>
+                            <option value="">课间操</option>
+                            <option value="">眼保健操</option>
+                            <option value="">午休</option>
+                            <option value="">晚读</option>
+                            <option value="">其他</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">增加位置：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="1">第一节之后</option>
+                            <option value="2">第二节之后</option>
+                            <option value="3">第三节之后</option>
+                            <option value="4">第四节之后</option>
+                            <option value="5">第五节之后</option>
+                            <option value="6">第六节之后</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">起止时间：</label>
+                        <input class="yui3-u easyui-timespinner" style="width:80px;" value="00:00" name="starttime">
+                        <em class="yui3-u">-</em>
+                        <input class="yui3-u easyui-timespinner" style="width:80px;" value="00:00" name="endtime">
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u"></label>
+                        <input class="yui3-u cp-button" type="submit" value="新增">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--publictime end-->
+
+<!--publictime-delete-->
+<div id="publictime-delete" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>删除公共时间</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog publictime-delete">
+                <h3>请选择你要删除的课余时间：</h3>
+                <ul class="yui3-g">
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>早读</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>课间操</label>
+                    </li>
+                    <li class="yui3-u">
+                        <label><input type="checkbox"/>眼保健操</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cmspages-dialog-ft">
+            <input type="submit" class="cp-button" value="删除"/>
+        </div>
+    </div>
+</div>
+<!--publictime-delete end-->
+
+
+<script src="../assets/js/lib/jquery.js"></script>
+<script src="../assets/js/require.js"></script>
+<script>
+    var json_url="/SchoolTime/coursetime_data.json"
+    require(["lib/dialog","core/getTeachgroup"],function(){
+        $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+    })
+
+    $(function(){
+        $(".getData").on("click",function(){
+            var msg=$("#dg").datagrid("getData")
+            $.each(msg.rows,function(i,val){
+                console.log(val.starttime,val.endtime)
+            })
+        })
+    })
+</script>
+</body>
+</html>

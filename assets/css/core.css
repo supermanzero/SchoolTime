@@ -1,0 +1,151 @@
+select{
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.pub-head{
+    padding: 0 0 0 210px;
+}
+.pub-head-logo{
+    width: 210px;
+    margin-left: -210px;
+}
+.pub-head-logo .logo{
+    display: block;
+    height: 70px;
+    background: url("http://lorempixel.com/200/70/cats/") no-repeat;
+}
+.pub-head-main{
+    width: 100%;
+}
+
+.cmspages{
+    padding: 20px 0;
+}
+.cmspages-head-menu label.yui3-u{
+    color: #fff;
+}
+.cmspages-content-menu{
+    width: 210px;
+    margin-left: -210px;
+}
+.cmspages-content-menu-bd{
+    padding-right: 10px;
+}
+.cmspages-layout{
+    padding: 0 0 0 210px;
+}
+.pub-table{
+    border: 1px solid #ddd;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.pub-table td,.pub-table th{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+.pub-table thead td,.pub-table thead th{
+    border-bottom-width: 2px;
+    background: #eee;
+}
+.pub-table .active{
+    background: #eee;
+}
+.course-dialog select{
+    width: 220px;
+}
+.course-info-hd{
+    position: relative;
+    margin: 0 0 20px;
+}
+.course-info-hd a.cp-button{
+    margin: 0 10px 0 0;
+}
+.class-set .grade-select{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.class-set .grade-select label{
+    margin-top: 6px;
+}
+.importtpl{
+    margin: 50px;
+}
+.importtpl p{
+    margin: 0 0 10px;
+}
+.importtpl p a{
+    color: #F60;
+    text-decoration: underline;
+}
+.add-teach li{
+    width: auto;
+}
+.add-teach dl{
+    width: 280px;
+    margin-right: -1px;
+}
+.add-teach dd{
+    margin-right: 15px;
+}
+.add-teach input[type="checkbox"]{
+    margin: 5px 10px 5px 0
+}
+.datagrid-toolbar{
+    padding: 10px;
+}
+.datagrid-toolbar .fa{
+    margin: 5px 5px 0 0;
+}
+.datagrid-toolbar a{
+    padding: 0 10px;
+    margin: 0 4px;
+}
+
+.datagrid-view .validatebox-text{
+    height: auto;
+    line-height: 1;
+}
+.course-dialog.prompt p{
+    margin: 50px;
+}
+.course-dialog .prompt-ft{
+    text-align: center;
+}
+.course-dialog .prompt-ft a{
+    margin: 0 10px;
+}
+
+.course-time ul{
+    margin: 10px 0 0;
+}
+.course-time li{
+    margin: 0 15px 20px 0;
+}
+.course-time li input[type="checkbox"]{
+    vertical-align: -2px;
+    margin: 0 5px 0 0;
+}
+.spinner .textbox-text, .spinner .validatebox-text{
+    height: auto;
+    line-height: 1;
+}
+.public-time li .spinner{
+    margin: 5px;
+}
+.public-time li em{
+    margin-top: 8px;
+}
+.publictime-delete ul{
+    padding: 40px 10px 20px;
+}
+.publictime-delete li{
+    padding: 0 15px 10px 0;
+}
+.publictime-delete li input[type="checkbox"]{
+    margin: 0 5px 0 0;
+    vertical-align: -2px;
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/yahoo-reset.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/dialog.css"/>
+    <link rel="stylesheet" href="../assets/css/base.css"/>
+    <link rel="stylesheet" href="../assets/css/core.css"/>
+</head>
+<body>
+<!--user-menu-->
+<div class="user-menu yui3-g">
+    <div class="user-menu-hd yui3-u">
+        <a href="" class="yui3-u easyui-menubutton" data-options="menu:'#user-menu-content'">ASDFSDF<i class="fa fa-caret-down fa-blue fa-3x"></i></a>
+        <div id="user-menu-content" class="menu-content" style="position: absolute;">
+            <div class="user-menu-content-bd">
+                <i class="fa fa-caret-up fa-2x"></i>
+                <ul>
+                    <li>
+                        <a href="../message.html">消息</a>
+                    </li>
+                    <li>
+                        <a href="../bind.html">绑定</a>
+                    </li>
+                    <li>
+                        <a href="../userinfo-set.html">设置</a>
+                    </li>
+                    <li>
+                        <a href="">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--user-menu end-->
+
+<!--pub-head-->
+<div class="pub-head yui3-g">
+    <div class="yui3-u pub-head-logo">
+        <a class="logo" href=""></a>
+    </div>
+    <div class="yui3-u pub-head-main">
+        <!--cmspages-head-->
+        <div class="cmspages-head yui3-g">
+            <div class="cmspages-head-menu yui3-u" >
+                <!--<img class="yui3-u" src="http://lorempixel.com/48/48/cats/" alt=""/>-->
+                <label class="yui3-u">东田教育教务管理系统</label>
+                <!--<i class="fa fa-angle-down fa-3x"></i>-->
+            </div>
+        </div>
+        <!--cmspages-head end-->
+    </div>
+</div>
+<!--pub-head end-->
+
+<div class="cmspages">
+    <div class="cmspages-layout yui3-g">
+        <div class="cmspages-content-menu yui3-u">
+            <div class="cmspages-content-menu-bd">
+                <ul>
+                    <li>
+                        <a class="on" href="javascript:void(0)">班级设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">授课教师设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课时设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cmspages-content yui3-u">
+            <div class="course-info">
+                <div class="course-info-hd">
+                    <a class="yui3-u cp-button nyroModal" href="#add-teach">新增教师</a>
+                    <a class="yui3-u cp-button nyroModal" href="#importtpl">批量导入教师</a>
+                    <a class="yui3-u cp-button nyroModal" href="#getTeachgroup">管理教师组</a>
+                </div>
+                <div class="course-info-bd">
+                    <table class="pub-table">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>科目</th>
+                        <th>学科组</th>
+                        <th>授课等级</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            张大千
+                        </td>
+                        <td>
+                            美术
+                        </td>
+                        <td>
+                            艺术
+                        </td>
+                        <td>
+                            一年级1班
+                        </td>
+                        <td>
+                            <a href="#add-teach" class="nyroModal">编辑</a>
+                            <a href="#prompt" class="nyroModal">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="">&lt;</a>
+                <a class="on" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">&gt;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--新增教师-->
+<div id="add-teach" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>新增教师</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog add-teach">
+                <ul class="cmspages-dialog-bind-account">
+                    <li class="yui3-g">
+                        <label class="yui3-u">姓名：</label>
+                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">科目：</label>
+                        <dl class="yui3-u">
+                            <dd class="yui3-u"><label><input type="checkbox"/>语文</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>数学</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>英语</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>美术</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>体育</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>自然</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>思想品德</label></dd>
+                        </dl>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">教师组：</label>
+                        <dl class="yui3-u">
+                            <dd class="yui3-u"><label><input type="checkbox"/>语文组</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>数学组</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>英语组</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>美术组</label></dd>
+                            <dd class="yui3-u"><label><input type="checkbox"/>体育组</label></dd>
+                        </dl>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">授课班级：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">一年级1班</option>
+                            <option value="">二年级2班</option>
+                            <option value="">三年级3班</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u"></label>
+                        <input class="yui3-u cp-button" type="submit" value="新增">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--新增教师 end-->
+
+<!--导入教师-->
+<div id="importtpl" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>批量导入教师</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog importtpl">
+                <p><a href="">下载教师模板</a>，按模板编辑好教师名单，再导入系统。若已经存在的教师不会再导入。</p>
+                <label>上传教师名单：<input type="file" class="" value=""/></label>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导入教师 end-->
+
+<!--管理教师组-->
+<div id="getTeachgroup" style="position: absolute;top: -9999px">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>管理教师组</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="getTeachgroup">
+                <table id="dg" class="easyui-datagrid" title="" style="width:330px;height:240px">
+                    <thead>
+                    <tr>
+                        <th data-options="field:'teach',width:250,editor:{type:'validatebox',options:{required:true}}">教师组</th>
+                        <th data-options="field:'ck',checkbox:true"></th>
+                        <!--<th data-options="field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}">Status</th>-->
+                    </tr>
+                    </thead>
+                </table>
+
+                <div class="toolbar" id="tb" style="height:auto;">
+                    <a href="javascript:void(0)" class="addteach yui3-u cp-button cp-button-grev"><i class="fa fa-plus-square fa-1x"></i>新增</a>
+                    <a href="javascript:void(0)" class="removeteach yui3-u cp-button cp-button-grev"><i class="fa fa-minus-square fa-1x"></i>删除</a>
+                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="removeit()"><i class="fa fa-minus-square fa-1x"></i>删除</a>-->
+                    <a href="javascript:void(0)" class="saveteach yui3-u cp-button cp-button-grev"><i class="fa fa-floppy-o fa-1x"></i>保存修改</a>
+                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="reject()">Reject</a>-->
+                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="getChanges()">GetChanges</a>-->
+                </div>
+                <button class="cp-button getData">getData</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--管理教师组 end-->
+
+<!--提示-->
+<div id="prompt" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>系统提示</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog prompt">
+                <p>删除教师组后，该教师组的的教师会被删除，确定要删除语文组吗？</p>
+                <div class="prompt-ft">
+                    <a class="yui3-u cp-button" href="">确定</a>
+                    <a class="yui3-u cp-button" href="">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--提示 end-->
+
+
+<script src="../assets/js/lib/jquery.js"></script>
+<script src="../assets/js/require.js"></script>
+<script>
+    var json_url="/SchoolTime/datagrid_data1.json"
+    require(["lib/dialog","core/getTeachgroup"],function(){
+        $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+    })
+
+    $(function(){
+        $(".getData").on("click",function(){
+            var msg=$("#dg").datagrid("getData")
+            $.each(msg.rows,function(i,val){
+                console.log(val.id,val.teach)
+            })
+        })
+    })
+</script>
+</body>
+</html>

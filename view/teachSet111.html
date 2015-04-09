@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/yahoo-reset.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/dialog.css"/>
+    <link rel="stylesheet" href="../assets/css/base.css"/>
+    <link rel="stylesheet" href="../assets/js/lib/jquery-easyui-1.4.2/themes/gray/easyui.css"/>
+    <link rel="stylesheet" href="../assets/css/core.css"/>
+</head>
+<body>
+
+
+
+<table id="dg" class="easyui-datagrid" title="" style="width:310px;height:auto">
+    <thead>
+    <tr>
+        <!--<th data-options="field:'itemid',width:80">Item ID</th>-->
+        <!--<th data-options="field:'productid',width:100,-->
+						<!--formatter:function(value,row){-->
+							<!--return row.productname;-->
+						<!--},-->
+						<!--editor:{-->
+							<!--type:'combobox',-->
+							<!--options:{-->
+								<!--valueField:'productid',-->
+								<!--textField:'productname',-->
+								<!--method:'get',-->
+								<!--url:'products.json',-->
+								<!--required:true-->
+							<!--}-->
+						<!--}">Product</th>-->
+        <!--<th data-options="field:'listprice',width:80,align:'right',editor:{type:'numberbox',options:{precision:1}}">List Price</th>-->
+        <!--<th data-options="field:'unitcost',width:80,align:'right',editor:'numberbox'">Unit Cost</th>-->
+        <th data-options="field:'starttime',width:80,align:'right',editor:{type:'timespinner',options:{required:true}}">Unit Cost</th>
+
+        <th data-options="field:'ck',checkbox:true"></th>
+        <!--<th data-options="field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}">Status</th>-->
+    </tr>
+    </thead>
+</table>
+
+<div class="toolbar" id="tb" style="height:auto;padding: 8px">
+    <a href="javascript:void(0)" class="addteach yui3-u cp-button cp-button-grev" ><i class="fa fa-plus-square fa-1x"></i>新增</a>
+    <a href="javascript:void(0)" class="removeteach yui3-u cp-button cp-button-grev" ><i class="fa fa-minus-square fa-1x"></i>删除</a>
+    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="removeit()"><i class="fa fa-minus-square fa-1x"></i>删除</a>-->
+    <a href="javascript:void(0)" class="saveteach yui3-u cp-button cp-button-grev" ><i class="fa fa-floppy-o fa-1x"></i>保存修改</a>
+    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="reject()">Reject</a>-->
+    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="getChanges()">GetChanges</a>-->
+</div>
+<button class="cp-button getData">getData</button>
+<div style="display: none">
+<input class="easyui-timespinner" style="width:80px;">
+</div>
+<script src="../assets/js/lib/jquery.js"></script>
+<!--<script src="../assets/js/lib/jquery-easyui-1.4.2/src/easyloader.js"></script>-->
+<script src="../assets/js/require.js"></script>
+<script>
+    var json_url="/SchoolTime/coursetime_data.json"
+    require(["easyui/easyloader","lib/dialog","core/getTeachgroup"],function(){
+        $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>',beforeShowCont:function(){$.nmTop().resize(true)}});
+
+//          easyloader.load("numberbox");
+//          easyloader.load("validatebox");
+//          easyloader.load("datagrid",function(){
+//            $("#dg").datagrid({
+//                rownumbers:true,
+//                selectOnCheck:false,
+//                iconCls: 'icon-edit',
+//                singleSelect: true,
+//                toolbar: '#tb',
+//                url: '/SchoolTime/datagrid_data1.json',
+//                method: 'get',
+//                onClickRow: onClickRow
+//            })
+//            var editIndex = undefined;
+//            function endEditing(){
+//                if (editIndex == undefined){return true}
+////        console.log($('#dg').datagrid('validateRow', editIndex))
+//                if ($('#dg').datagrid('validateRow', editIndex)){
+//                    var ed = $('#dg').datagrid('getEditor', {index:editIndex});
+////            var productname = $(ed.target).combobox('getText');
+////            $('#dg').datagrid('getRows')[editIndex]['productname'] = productname;
+//                    $('#dg').datagrid('endEdit', editIndex);
+//                    editIndex = undefined;
+//                    return true;
+//                } else {
+//                    return false;
+//                }
+//            }
+//            function onClickRow(index){
+//                if (editIndex != index){
+//                    if (endEditing()){
+//                        $('#dg').datagrid('selectRow', index)
+//                                .datagrid('beginEdit', index);
+//                        editIndex = index;
+//                    } else {
+//                        $('#dg').datagrid('selectRow', editIndex);
+//                    }
+//                }
+//            }
+//            function append(){
+//                if (endEditing()){
+//                    $('#dg').datagrid('appendRow',{status:'P'});
+//                    editIndex = $('#dg').datagrid('getRows').length-1;
+//                    $('#dg').datagrid('selectRow', editIndex)
+//                            .datagrid('beginEdit', editIndex);
+//                }
+//            }
+//            function removeit(){
+//                if (editIndex == undefined){return}
+//                $('#dg').datagrid('cancelEdit', editIndex)
+//                        .datagrid('deleteRow', editIndex);
+//                editIndex = undefined;
+//            }
+//            function accept(){
+//                if (endEditing()){
+//                    $('#dg').datagrid('acceptChanges');
+//                }
+//            }
+//            function reject(){
+//                $('#dg').datagrid('rejectChanges');
+//                editIndex = undefined;
+//            }
+//            function getChanges(){
+//                var rows = $('#dg').datagrid('getChanges');
+//                alert(rows.length+' rows are changed!');
+//            }
+//
+//            function del(){
+//                var rows = $('#dg').datagrid("getChecked");	//获取你选择的所有行
+//                //循环所选的行
+//                for(var i =0;i<rows.length;i++){
+//                    var index = $('#dg').datagrid('getRowIndex',rows[i]);//获取某行的行号
+//                    $('#dg').datagrid('deleteRow',index);	//通过行号移除该行
+//                }
+//            }
+//
+//        });
+    })
+
+    $(function(){
+        $(".getData").on("click",function(){
+            var msg=$("#dg").datagrid("getData")
+            $.each(msg.rows,function(i,val){
+                console.log(val.id,val.teach)
+            })
+        })
+    })
+
+
+</script>
+</body>
+</html>
