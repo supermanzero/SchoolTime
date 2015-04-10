@@ -141,6 +141,66 @@ input[type="submit"]{
     color: #05B7FA;
 }
 /*分页 end*/
+
+/*标签选项卡*/
+.pub-tabs ul{
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f7fb 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(99%,#f6f7fb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f7fb 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f6f7fb 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f7fb 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f7fb 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f7fb',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #DDDDE5;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.pub-tabs li{
+    border-right: 1px solid #DDDDE5;
+}
+.pub-tabs a{
+    display: block;
+    padding: 10px;
+}
+.pub-tabs .active a{
+    background: #F0F0F0;
+}
+/*标签选项卡 end*/
+
+/*面包屑*/
+.pub-breadcrumb-wrap{
+    position: relative;
+}
+.pub-breadcrumb-wrap a.return{
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+.pub-breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    height: 20px;
+    line-height: 20px;
+}
+.pub-breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.pub-breadcrumb li a{
+    font-family: 'Helvetica Neue', Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 14px;
+    height: auto;
+    color: #337ab7;
+}
+/*面包屑 end*/
+
 /*菜单导航页*/
 .manu-page-wrap{
     width: 100%;
@@ -1175,7 +1235,17 @@ input[type="submit"]{
 }
 .textbox{
     position: relative;
-}
+    /*border: 1px solid #D3D3D3;*/
+    background-color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;}
 .textbox-addon {
     position: absolute;
     top: 0;

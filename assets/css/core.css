@@ -58,7 +58,7 @@ select{
 }
 .course-info-hd{
     position: relative;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 .course-info-hd a.cp-button{
     margin: 0 10px 0 0;
@@ -126,12 +126,30 @@ select{
     margin: 0 15px 20px 0;
 }
 .course-time li input[type="checkbox"]{
-    vertical-align: -2px;
+    vertical-align: -12%;
     margin: 0 5px 0 0;
 }
 .spinner .textbox-text, .spinner .validatebox-text{
     height: auto;
     line-height: 1;
+}
+.public-time .textbox-text{
+    /*display: inline-block;*/
+    /*outline: none;*/
+    /*border: 0;*/
+}
+.public-time .textbox .textbox-text {
+    font-size: 12px;
+    border: 0;
+    margin: 0;
+    padding: 4px;
+    white-space: normal;
+    vertical-align: top;
+    outline-style: none;
+    resize: none;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 .public-time li .spinner{
     margin: 5px;
@@ -148,4 +166,14 @@ select{
 .publictime-delete li input[type="checkbox"]{
     margin: 0 5px 0 0;
     vertical-align: -2px;
+}
+.add-course .textbox-text{
+    width: 200px!important;
+}
+.pub-tabs{
+    margin-bottom: 20px;
+}
+
+.course-operate .course-info-hd li{
+    margin-left: 20px;
 }

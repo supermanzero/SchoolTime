@@ -80,49 +80,105 @@
             </div>
         </div>
         <div class="cmspages-content yui3-u">
-            <div class="course-info">
+            <div class="pub-breadcrumb-wrap">
+                <ol class="pub-breadcrumb yui3-g">
+                    <li class="yui3-u"><a href="#">广州荔湾环翠园小学2014学年-2015学年排课表</a></li>
+                    <li class="yui3-u active">班级课时统计</li>
+                </ol>
+                <a href="" class="yui3-u cp-button return">返回</a>
+            </div>
+            <div class="pub-tabs">
+                <ul class="yui3-g">
+                    <li class="yui3-u"><a href="">教师课时统计</a></li>
+                    <li class="yui3-u active"><a href="">班级课时统计</a></li>
+                    <li class="yui3-u"><a href="">查询空闲教师</a></li>
+                </ul>
+            </div>
+
+            <div class="course-info class-set course-operate">
                 <div class="course-info-hd">
-                    <a class="yui3-u cp-button nyroModal" href="#add-course">新增课程</a>
-                    <a class="yui3-u cp-button nyroModal" href="#importtpl">批量导入课程</a>
+                    <a class="yui3-u cp-button" href="#add-class">下载</a>
+                    <ul class="grade-select yui3-u">
+                        <li class="yui3-u">
+                            <label class="yui3-u">年级：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">一年级</option>
+                                <option value="">二年级</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <label class="yui3-u">班级：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">1班</option>
+                                <option value="">1班</option>
+                                <option value="">1班</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <input type="submit" class="yui3-u cp-button" value="查询"/>
+                        </li>
+                    </ul>
                 </div>
                 <div class="course-info-bd">
                     <table class="pub-table">
                     <thead>
                     <tr>
-                        <th>课程名称</th>
-                        <th>年级</th>
-                        <th>学段课程</th>
-                        <th>课程等级</th>
-                        <th>周课时数</th>
-                        <th>操作</th>
+                        <th></th>
+                        <th>语文</th>
+                        <th>数学</th>
+                        <th>英语</th>
+                        <th>美术</th>
+                        <th>体育</th>
+                        <th>自然</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>
-                            语文
+                            总计
                         </td>
                         <td>
-                            一年级
+                            100
                         </td>
                         <td>
-                            语文
+                            100
                         </td>
                         <td>
-                            国家课程
+                            100
                         </td>
                         <td>
-                            6
+                            100
                         </td>
                         <td>
-                            <a href="#add-course" class="nyroModal">编辑</a>
-                            <a href="">删除</a>
+                            100
                         </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>一年1班</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>一年1班</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
                     </tr>
                     </tbody>
                 </table>
                 </div>
             </div>
+
             <div class="pagination">
                 <a href="">&lt;</a>
                 <a class="on" href="">1</a>
@@ -137,20 +193,20 @@
 </div>
 
 
-<div id="add-course" style="display: none">
+<div id="add-class" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
-            <h3>新增课程</h3>
+            <h3>新增班级</h3>
         </div>
         <div class="cmspages-dialog-bd">
-            <div class="course-dialog add-course">
+            <div class="course-dialog add-class">
                 <ul class="cmspages-dialog-bind-account">
                     <li class="yui3-g">
-                        <label class="yui3-u">课程名称：</label>
+                        <label class="yui3-u">班级名称：</label>
                         <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
                     </li>
                     <li class="yui3-g">
-                        <label class="yui3-u">年级：</label>
+                        <label class="yui3-u">班级名称：</label>
                         <select name="" id="" class="yui3-u">
                             <option value="">一年级</option>
                             <option value="">二年级</option>
@@ -158,23 +214,7 @@
                         </select>
                     </li>
                     <li class="yui3-g">
-                        <label class="yui3-u">学段课程：</label>
-                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">课程等级：</label>
-                        <select name="" id="" class="yui3-u">
-                            <option value="">国家课程</option>
-                            <option value="">国家课程</option>
-                            <option value="">国家课程</option>
-                        </select>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">周课时数：</label>
-                        <input type="number" class="easyui-numberbox easyui-validatebox" name="hour" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u"></label>
+                        <label class="yui3-u ff"></label>
                         <input class="yui3-u cp-button" type="submit" value="新增">
                     </li>
                 </ul>
@@ -186,17 +226,16 @@
 <div id="importtpl" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
-            <h3>批量导入课程</h3>
+            <h3>批量导入班级</h3>
         </div>
         <div class="cmspages-dialog-bd">
             <div class="course-dialog importtpl">
-                <p><a href="">下载课程模板</a>，按模板编辑好课程信息，再导入系统。若已经存在的课程不会再导入。</p>
-                <label>上传课程信息表：<input type="file" class=""/></label>
+                <p><a href="">下载班级模板</a>，按模板编辑好班级信息，再导入系统。若已经存在的班级不会再导入。</p>
+                <label>上传班级信息表：<input type="file" class=""/></label>
             </div>
         </div>
     </div>
 </div>
-
 
 <script src="../assets/js/lib/jquery.js"></script>
 <script src="../assets/js/require.js"></script>
