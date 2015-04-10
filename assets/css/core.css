@@ -59,6 +59,7 @@ select{
 .course-info-hd{
     position: relative;
     margin: 0 0 10px;
+    min-height: 30px;
 }
 .course-info-hd a.cp-button{
     margin: 0 10px 0 0;
