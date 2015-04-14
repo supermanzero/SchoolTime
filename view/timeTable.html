@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/yahoo-reset.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/dialog.css"/>
+    <link rel="stylesheet" href="../assets/css/base.css"/>
+    <link rel="stylesheet" href="../assets/css/core.css"/>
+</head>
+<body>
+<!--user-menu-->
+<div class="user-menu yui3-g">
+    <div class="user-menu-hd yui3-u">
+        <a href="" class="yui3-u easyui-menubutton" data-options="menu:'#user-menu-content'">ASDFSDF<i class="fa fa-caret-down fa-blue fa-3x"></i></a>
+        <div id="user-menu-content" class="menu-content" style="position: absolute;">
+            <div class="user-menu-content-bd">
+                <i class="fa fa-caret-up fa-2x"></i>
+                <ul>
+                    <li>
+                        <a href="../message.html">消息</a>
+                    </li>
+                    <li>
+                        <a href="../bind.html">绑定</a>
+                    </li>
+                    <li>
+                        <a href="../userinfo-set.html">设置</a>
+                    </li>
+                    <li>
+                        <a href="">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--user-menu end-->
+
+<!--pub-head-->
+<div class="pub-head yui3-g">
+    <div class="yui3-u pub-head-logo">
+        <a class="logo" href=""></a>
+    </div>
+    <div class="yui3-u pub-head-main">
+        <!--cmspages-head-->
+        <div class="cmspages-head yui3-g">
+            <div class="cmspages-head-menu yui3-u" >
+                <!--<img class="yui3-u" src="http://lorempixel.com/48/48/cats/" alt=""/>-->
+                <label class="yui3-u">东田教育教务管理系统</label>
+                <!--<i class="fa fa-angle-down fa-3x"></i>-->
+            </div>
+        </div>
+        <!--cmspages-head end-->
+    </div>
+</div>
+<!--pub-head end-->
+
+<div class="cmspages">
+    <div class="cmspages-layout yui3-g">
+        <div class="cmspages-content-menu yui3-u">
+            <div class="cmspages-content-menu-bd">
+                <ul>
+                    <li>
+                        <a class="on" href="javascript:void(0)">班级设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">授课教师设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课时设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cmspages-content yui3-u">
+            <div class="course-info class-set time-table">
+                <div class="course-info-title"><h3>学校：广州市荔湾区环翠园小学</h3></div>
+                <div class="course-info-hd">
+                    <a href="" class="cp-button yui3-u newtimetable">新建排课</a>
+                    <ul class="grade-select yui3-u">
+                        <li class="yui3-u">
+                            <label class="yui3-u">学期：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">2014-2015学年上学期</option>
+                                <option value="">2014-2015学年上学期</option>
+                                <option value="">2014-2015学年上学期</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <label class="yui3-u">课程表：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">班级课程表</option>
+                                <option value="">班级课程表</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <label class="yui3-u">年级：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">一年级</option>
+                                <option value="">二年级</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <label class="yui3-u">班级：</label>
+                            <select name="" id="" class="yui3-u">
+                                <option value="">1班</option>
+                                <option value="">2班</option>
+                                <option value="">3班</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u">
+                            <input type="submit" class="yui3-u cp-button" value="查询">
+                        </li>
+                    </ul>
+                </div>
+                <div class="course-info-bd">
+                    <div class="course-info-bd-tp">
+                        <h3>二年级（1）班课程表</h3>
+                        <ul class="">
+                            <li class="yui3-u"><a class="yui3-u cp-button" href="#">临时调课</a></li>
+                            <li class="yui3-u"><a class="yui3-u cp-button easyui-menubutton" href="#" data-options="menu:'#more-box'">更多操作</a></li>
+                        </ul>
+                        <div id="more-box" class="menu-content">
+                            <dl>
+                                <dd><a href="">导出课程表</a></dd>
+                                <dd><a href="">课程统计</a></dd>
+                                <dd><a href="">调课记录</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <table class="pub-table">
+                    <thead>
+                    <tr>
+                        <th class="yui3-u-1-6">时间</th>
+                        <th class="yui3-u-1-6">周一</th>
+                        <th class="yui3-u-1-6">周二</th>
+                        <th class="yui3-u-1-6">周三</th>
+                        <th class="yui3-u-1-6">周四</th>
+                        <th class="yui3-u-1-6">周五</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>7:40-8:00</p>
+                            </td>
+                            <td colspan="5">
+                                <p>早读</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>第一节</p>
+                                <p>8:00-8:45</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>第二节</p>
+                                <p>8:55-9:40</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>9:40-10:00</p>
+                            </td>
+                            <td colspan="5">
+                                <p>课间操</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>第三节</p>
+                                <p>10:00-10:45</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>10:45-11:05</p>
+                            </td>
+                            <td colspan="5">
+                                <p>眼保健操</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>第四节</p>
+                                <p>11:05-11:50</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                            <td>
+                                <p>语文</p>
+                                <p>李晓军</p>
+                            </td>
+                            <td>
+                                <p>数学</p>
+                                <p>张红</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>11:50-14:00</p>
+                            </td>
+                            <td colspan="5">
+                                <p>午休</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="">&lt;</a>
+                <a class="on" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">&gt;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="add-course" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>新增课程</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog add-course">
+                <ul class="cmspages-dialog-bind-account">
+                    <li class="yui3-g">
+                        <label class="yui3-u">课程名称：</label>
+                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">年级：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">一年级</option>
+                            <option value="">二年级</option>
+                            <option value="">三年级</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">学段课程：</label>
+                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">课程等级：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="">国家课程</option>
+                            <option value="">国家课程</option>
+                            <option value="">国家课程</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">周课时数：</label>
+                        <input type="number" class="easyui-numberbox easyui-validatebox" name="hour" data-options="required:true,missingMessage:'不能为空'"/>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u"></label>
+                        <input class="yui3-u cp-button" type="submit" value="新增">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="importtpl" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>批量导入课程</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog importtpl">
+                <p><a href="">下载课程模板</a>，按模板编辑好课程信息，再导入系统。若已经存在的课程不会再导入。</p>
+                <label>上传课程信息表：<input type="file" class=""/></label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/js/lib/jquery.js"></script>
+<script src="../assets/js/require.js"></script>
+<script>
+    require(["easyui/easyloader","lib/dialog"],function(){
+        easyloader.load("numberbox");
+        $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+    })
+</script>
+</body>
+</html>

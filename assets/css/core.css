@@ -36,6 +36,10 @@ select{
 .cmspages-layout{
     padding: 0 0 0 210px;
 }
+.pub-table th,.pub-table td{
+    display: table-cell;
+    min-height: 40px;
+}
 .pub-table{
     border: 1px solid #ddd;
     border-spacing: 0;
@@ -175,6 +179,52 @@ select{
     margin-bottom: 20px;
 }
 
-.course-operate .course-info-hd li{
+.course-info-hd li{
     margin-left: 20px;
+}
+.course-info-title{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.course-info.time-table .course-info-hd{
+    margin-bottom: 20px;
+}
+.course-info-bd-tp{
+    position: relative;
+    margin: 0 0 10px;
+    min-height: 30px;
+}
+.course-info-bd-tp h3{
+    font-size: 14px;
+    padding: 8px 0 0;
+}
+.course-info-bd-tp ul{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.course-info-bd-tp ul li{
+    margin-left: 20px;
+}
+.time-table .newtimetable{
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+.course-info.time-table .grade-select{
+    left: -20px;
+}
+#more-box{
+    position: absolute;
+    display: none;
+}
+#more-box dl{
+    background: #fff;border:1px solid #ddd;border-radius:3px;width: 100px;margin: 3px 0 0 5px;
+}
+#more-box dd a{
+    display: block;
+    padding: 8px 10px;
+}
+#more-box dd a:hover{
+    background: #E5F2FF;
 }
