@@ -314,9 +314,9 @@
                     </li>
                     <li class="yui3-g">
                         <label class="yui3-u">起止时间：</label>
-                        <input class="yui3-u easyui-timespinner" style="width:80px;" value="00:00" name="starttime">
+                        <input class="yui3-u easyui-timespinner" style="width:90px;" value="00:00" name="starttime">
                         <em class="yui3-u">-</em>
-                        <input class="yui3-u easyui-timespinner" style="width:80px;" value="00:00" name="endtime">
+                        <input class="yui3-u easyui-timespinner" style="width:90px;" value="00:00" name="endtime" data-options="required:true">
                     </li>
                     <li class="yui3-g">
                         <label class="yui3-u"></label>
@@ -371,7 +371,7 @@
         $(".getData").on("click",function(){
             var msg=$("#dg").datagrid("getData")
             $.each(msg.rows,function(i,val){
-                console.log(val.starttime,val.endtime)
+                console.log(val,val.endtime)
             })
         })
     })
