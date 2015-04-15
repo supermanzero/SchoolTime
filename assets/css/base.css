@@ -32,6 +32,7 @@ body,p,a{
     color: #B7B7B7;
 }
 .cp-button{
+    border-radius: 3px;
     padding: 0px 20px;
     height: 30px;
     line-height: 30px;

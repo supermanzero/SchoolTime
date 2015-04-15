@@ -36,6 +36,10 @@ select{
 .cmspages-layout{
     padding: 0 0 0 210px;
 }
+.pub-table th,.pub-table td{
+    display: table-cell;
+    min-height: 30px;
+}
 .pub-table{
     border: 1px solid #ddd;
     border-spacing: 0;
@@ -45,6 +49,7 @@ select{
     border: 1px solid #ddd;
     text-align: center;
     padding: 8px;
+    vertical-align: middle;
 }
 .pub-table thead td,.pub-table thead th{
     border-bottom-width: 2px;
@@ -175,6 +180,91 @@ select{
     margin-bottom: 20px;
 }
 
-.course-operate .course-info-hd li{
+.course-info-hd li{
     margin-left: 20px;
+}
+.course-info-title{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.course-info.time-table .course-info-hd{
+    margin-bottom: 20px;
+}
+.course-info-bd-tp{
+    position: relative;
+    margin: 0 0 10px;
+    min-height: 30px;
+}
+.course-info-bd-tp h3{
+    font-size: 14px;
+    padding: 8px 0 0;
+}
+.course-info-bd-tp ul{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.course-info-bd-tp ul li{
+    margin-left: 20px;
+}
+.time-table a.newtimetable{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    margin: 0;
+}
+.course-info.time-table .grade-select{
+    left: -20px;
+}
+#more-box{
+    position: absolute;
+    display: none;
+}
+#more-box dl{
+    background: #fff;border:1px solid #ddd;border-radius:3px;width: 100px;margin: 3px 0 0 5px;
+}
+#more-box dd a{
+    display: block;
+    padding: 8px 10px;
+}
+#more-box dd a:hover{
+    background: #E5F2FF;
+}
+
+.cmspages-dialog-bd .export-table ul{
+    width: 500px;
+    margin: 20px auto;
+}
+.cmspages-dialog-bd .export-table li a{
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.cmspages-dialog-bd .export-table a:hover{
+    background: #eee;
+}
+.cmspages-dialog-bd .export-table p{
+   text-align: center;
+}
+.cmspages-dialog-bd .export-table h3{
+    text-align: center;
+    font-size: 14px;
+}
+.cmspages-dialog-bd .newcreate{
+    margin: 40px 0 0;
+    padding: 0 30px;
+}
+.cmspages-dialog-bd .newcreate p{
+    line-height: 1.6;
+}
+.cmspages-dialog-bd .newcreate .ft-button{
+    text-align: center;
+    margin-top: 20px;
+}
+.cmspages-dialog-bd .newcreate .ft-button a.cp-button{
+    margin: 0 10px;
 }

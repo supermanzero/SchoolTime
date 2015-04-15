@@ -12,7 +12,8 @@ define(["easyui/easyloader"],function () {
                 toolbar: '#tb',
                 url: json_url,
                 method: 'get',
-                onClickRow: onClickRow
+//                onClickRow: onClickRow,
+                onAfterEdit:onAfterEdit
             })
             var editIndex = undefined;
             function endEditing(){
@@ -75,9 +76,20 @@ define(["easyui/easyloader"],function () {
                     var index = $('#dg').datagrid('getRowIndex',rows[i]);//获取某行的行号
                     $('#dg').datagrid('deleteRow',index);	//通过行号移除该行
                 }
+                var deldate=$('#dg').datagrid('getChanges',"deleted");
+                console.log(deldate)
             }
 
-            $("#dg").show()
+            function onAfterEdit(rowIndex,rowData,changes){
+                if(rowData._id){
+                    console.log(rowData._id)
+                }else{
+                    console.log(changes.name)
+                }
+
+            }
+
+//            $("#dg").show()
             $(".toolbar").on("click",".addteach",function(){
                 append()
             }).on("click",".removeteach",function(){
