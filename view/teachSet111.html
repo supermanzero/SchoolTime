@@ -39,17 +39,73 @@
     </style>
 </head>
 <body>
-<div class="timetable-wrap">
+
 <div class="drop-nav yui3-g">
     <div class="left yui3-u-1">
     <fieldset>
         <legend>待排课程</legend>
+        <!--<ul class="yui3-g">-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>语文</p>-->
+                    <!--<p>ABC</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>数学</p>-->
+                    <!--<p>D</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>英语</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>地理</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>历史</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>政治</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>音乐</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>化学</p>-->
+                    <!--<p>E</p>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="yui3-u">-->
+                <!--<div class="item">-->
+                    <!--<p>物理</p>-->
+                    <!--<p>F</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
     </fieldset>
 
     </div>
 </div>
 
-<div class="timetable">
+<div class="right">
     <table class="pub-table">
     <thead>
     <tr>
@@ -353,7 +409,7 @@
     </div>
 </div>
 
-<div class="timetable">
+<div class="right">
     <table class="pub-table">
     <thead>
     <tr>
@@ -370,27 +426,25 @@
     </tbody>
     </table>
 </div>
-</div>
-
 <style type="text/css">
-    .timetable{
+    .right{
         width: 800px;
         margin: auto;
     }
-    .timetable td.drop{
+    .right td.drop{
         background:#fff;
         width:115px;
     }
-    .timetable td.over{
+    .right td.over{
         background:#C1CD07;
     }
-    .timetable .nodrop{
+    .nodrop{
         border-radius: 3px;
         border: 1px solid #ddd;
         background: #eee;
         /*padding: 5px 0;*/
     }
-    .timetable-wrap .item{
+    .item{
         text-align:center;
         background:#fff;
         color:#444;
@@ -400,21 +454,22 @@
         border: 1px solid #ddd;
         border-radius: 3px;
     }
-    .drop-nav .left .item{
+    .left .item{
         border: 1px solid #ddd;
         border-radius: 3px;
     }
-    .drop-nav .left li{
+    .left li{
         margin: 5px 8px;
     }
-    .timetable-wrap .assigned{
+    .assigned{
 
     }
-    .timetable-wrap .trash{
+    .trash{
         background-color:#f60;
     }
-    .timetable-wrap .trash p{
+    .trash p{
         color: #fff;
+        cursor: ;
     }
 
 </style>
@@ -422,10 +477,6 @@
 <script src="../assets/js/lib/jquery.js"></script>
 <!--<script src="../assets/js/lib/jquery-easyui-1.4.2/src/easyloader.js"></script>-->
 <script src="../assets/js/require.js"></script>
-
-
-
-
 <script>
     var data = { "timetable": [
         { "joint": "第一节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师"},"tues":{"name":"语文","teach":"张老师"},"wed":{"name":"语文","teach":"张老师"},"thurs":{"name":"语文","teach":"张老师"},"fri":{"name":"语文","teach":"张老师"}},
@@ -452,6 +503,9 @@
        $(".drop-nav").find("fieldset").append(compiledTemplate);
         var timetable=course["./assets/js/core/template/timetable.handlebars"](data);
         $("#timetable").append(timetable)
+//        $("#timetable").find("tr").eq((data.morning.beforerow)-1).on("click",function(){
+//            console.log($(this))
+//        })
 
 
         $.each(data.othertime,function(i,val){
@@ -465,7 +519,9 @@
             console.log(data.nodrop[i]);
             $("td[data-map="+data.nodrop[i]+"]").removeClass().find("div").removeClass().addClass("nodrop")
         })
+//        $("td[data-map='a1']").removeClass().find("div").removeClass().addClass("nodrop")
 
+//        console.log(!data.lanch.beforerow)
     })
 
 
