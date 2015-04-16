@@ -12,7 +12,7 @@ define(["easyui/easyloader"],function () {
                 toolbar: '#tb',
                 url: json_url,
                 method: 'get',
-//                onClickRow: onClickRow,
+                onClickRow: onClickRow,
                 onAfterEdit:onAfterEdit
             })
             var editIndex = undefined;
@@ -33,9 +33,9 @@ define(["easyui/easyloader"],function () {
             function onClickRow(index){
                 if (editIndex != index){
                     if (endEditing()){
-                        $('#dg').datagrid('selectRow', index)
-                            .datagrid('beginEdit', index);
-                        editIndex = index;
+//                        $('#dg').datagrid('selectRow', index)
+//                            .datagrid('beginEdit', index);
+//                        editIndex = index;
                     } else {
                         $('#dg').datagrid('selectRow', editIndex);
                     }

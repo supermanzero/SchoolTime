@@ -43,7 +43,9 @@ require.config({
     paths: {
         lib:"lib",
         core:"core",
-        easyui: 'lib/jquery-easyui-1.4.2'
+        easyui: 'lib/jquery-easyui-1.4.2',
+//        handlebars:"lib/handlebars/handlebars",
+        handlebars:"lib/handlebars/handlebars.runtime"
     },
     shim: {
 

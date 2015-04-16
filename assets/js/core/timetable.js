@@ -20,7 +20,13 @@ easyloader.load(["draggable","droppable"],function(){
                 $(this).removeClass('over');
             },
             onDrop:function(e,source){
+                if($(source).hasClass('assigned')){
+                    $(this).removeClass('over');
+                    console.log($(this))
+                    return
+                }
                 $(this).removeClass('over');
+//                console.log(e,source)
                 if ($(source).hasClass('assigned')){
                     $(this).append(source);
                 } else {
