@@ -9,475 +9,346 @@
     <link rel="stylesheet" href="../assets/css/base.css"/>
     <!--<link rel="stylesheet" href="../assets/js/lib/jquery-easyui-1.4.2/themes/gray/easyui.css"/>-->
     <link rel="stylesheet" href="../assets/css/core.css"/>
-    <style>
-        .drop-nav {
-            width: 800px;
-            margin: auto;
-            padding: 20px 0;
-        }
-        .left{
-            /*width: 700px;*/
-            /*padding: 20px;*/
-            /*border-radius: 3px;*/
-            /*border: 1px solid #ddd;*/
-        }
-        table{
-            margin: auto;
-        }
-        fieldset{
-            padding:10px 0px;
-            border-radius: 3px;
-            border: 1px solid #ddd;
-        }
-        fieldset legend{
-            margin-left: 15px;
-        }
-        .right .button {
-            text-align: right;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
 
-<div class="drop-nav yui3-g">
-    <div class="left yui3-u-1">
-    <fieldset>
-        <legend>待排课程</legend>
-        <!--<ul class="yui3-g">-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>语文</p>-->
-                    <!--<p>ABC</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>数学</p>-->
-                    <!--<p>D</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>英语</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>地理</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>历史</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>政治</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>音乐</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>化学</p>-->
-                    <!--<p>E</p>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="yui3-u">-->
-                <!--<div class="item">-->
-                    <!--<p>物理</p>-->
-                    <!--<p>F</p>-->
-                <!--</div>-->
-            <!--</li>-->
-        <!--</ul>-->
-    </fieldset>
+<div class="timetable-wrap">
+    <div class="drop-nav yui3-g">
+        <div class="left yui3-u-1">
+        <fieldset>
+            <legend>待排课程</legend>
+        </fieldset>
 
+        </div>
+    </div>
+
+    <div class="timetable">
+        <table class="pub-table">
+        <thead>
+        <tr>
+            <th class="" style="width: 115px">时间</th>
+            <th class="" style="width: 115px">周一</th>
+            <th class="" style="width: 115px">周二</th>
+            <th class="" style="width: 115px">周三</th>
+            <th class="" style="width: 115px">周四</th>
+            <th class="" style="width: 115px">周五</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <p>7:40-8:00</p>
+            </td>
+            <td colspan="5">
+                <p>早读</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第一节</p>
+                <p>8:00-8:45</p>
+            </td>
+            <td>
+                <div class="nodrop" data-map="a1">
+                    <p>数学</p>
+                    <p>张红</p>
+                </div>
+            </td>
+            <td class="drop" data-map="a2">
+                <div class="item assigned">
+                    <p>语文A</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="a3">
+                <div class="item assigned">
+                    <p>语文B</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="a4">
+                <div class="item assigned">
+                    <p>语文C</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="a5">
+                <div class="item assigned">
+                    <p>语文D</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第二节</p>
+                <p>8:55-9:40</p>
+            </td>
+            <td class="drop" data-map="b1">
+                <div class="item assigned">
+                    <p>语文E</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="b2">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="b3">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="b4">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="b5">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>9:40-10:00</p>
+            </td>
+            <td colspan="5">
+                <p>课间操</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第三节</p>
+                <p>10:00-10:45</p>
+            </td>
+            <td class="drop" data-map="c1">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="c2">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="c3">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="c4">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="c5">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>10:45-11:05</p>
+            </td>
+            <td colspan="5">
+                <p>眼保健操</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第四节</p>
+                <p>11:05-11:50</p>
+            </td>
+            <td class="drop" data-map="d1">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="d2">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="d3">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop" data-map="d4">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop"  data-map="d5">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>11:50-14:00</p>
+            </td>
+            <td colspan="5">
+                <p>午休</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第五节</p>
+                <p>14:00-14:45</p>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第六节</p>
+                <p>14:55-14:45</p>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>第七节</p>
+                <p>15:50-16:35</p>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+            <td class="drop">
+                <div class="item assigned">
+                    <p>语文</p>
+                    <p>李晓军</p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+        <div class="button">
+            <button class="yui3-u cp-button">保存</button>
+        </div>
+    </div>
+    <div class="timetable">
+        <table class="pub-table">
+        <thead>
+        <tr>
+            <th class="" style="width: 115px">时间</th>
+            <th class="" style="width: 115px">周一</th>
+            <th class="" style="width: 115px">周二</th>
+            <th class="" style="width: 115px">周三</th>
+            <th class="" style="width: 115px">周四</th>
+            <th class="" style="width: 115px">周五</th>
+        </tr>
+        </thead>
+        <tbody id="timetable">
+
+        </tbody>
+        </table>
     </div>
 </div>
-
-<div class="right">
-    <table class="pub-table">
-    <thead>
-    <tr>
-        <th class="" style="width: 115px">时间</th>
-        <th class="" style="width: 115px">周一</th>
-        <th class="" style="width: 115px">周二</th>
-        <th class="" style="width: 115px">周三</th>
-        <th class="" style="width: 115px">周四</th>
-        <th class="" style="width: 115px">周五</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>
-            <p>7:40-8:00</p>
-        </td>
-        <td colspan="5">
-            <p>早读</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第一节</p>
-            <p>8:00-8:45</p>
-        </td>
-        <td>
-            <div class="nodrop" data-map="a1">
-                <p>数学</p>
-                <p>张红</p>
-            </div>
-        </td>
-        <td class="drop" data-map="a2">
-            <div class="item assigned">
-                <p>语文A</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="a3">
-            <div class="item assigned">
-                <p>语文B</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="a4">
-            <div class="item assigned">
-                <p>语文C</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="a5">
-            <div class="item assigned">
-                <p>语文D</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第二节</p>
-            <p>8:55-9:40</p>
-        </td>
-        <td class="drop" data-map="b1">
-            <div class="item assigned">
-                <p>语文E</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="b2">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="b3">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="b4">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="b5">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>9:40-10:00</p>
-        </td>
-        <td colspan="5">
-            <p>课间操</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第三节</p>
-            <p>10:00-10:45</p>
-        </td>
-        <td class="drop" data-map="c1">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="c2">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="c3">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="c4">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="c5">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>10:45-11:05</p>
-        </td>
-        <td colspan="5">
-            <p>眼保健操</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第四节</p>
-            <p>11:05-11:50</p>
-        </td>
-        <td class="drop" data-map="d1">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="d2">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="d3">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop" data-map="d4">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop"  data-map="d5">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>11:50-14:00</p>
-        </td>
-        <td colspan="5">
-            <p>午休</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第五节</p>
-            <p>14:00-14:45</p>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第六节</p>
-            <p>14:55-14:45</p>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>第七节</p>
-            <p>15:50-16:35</p>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-        <td class="drop">
-            <div class="item assigned">
-                <p>语文</p>
-                <p>李晓军</p>
-            </div>
-        </td>
-    </tr>
-    </tbody>
-    </table>
-    <div class="button">
-        <button class="yui3-u cp-button">保存</button>
-    </div>
-</div>
-
-<div class="right">
-    <table class="pub-table">
-    <thead>
-    <tr>
-        <th class="" style="width: 115px">时间</th>
-        <th class="" style="width: 115px">周一</th>
-        <th class="" style="width: 115px">周二</th>
-        <th class="" style="width: 115px">周三</th>
-        <th class="" style="width: 115px">周四</th>
-        <th class="" style="width: 115px">周五</th>
-    </tr>
-    </thead>
-    <tbody id="timetable">
-
-    </tbody>
-    </table>
-</div>
-<style type="text/css">
-    .right{
-        width: 800px;
-        margin: auto;
-    }
-    .right td.drop{
-        background:#fff;
-        width:115px;
-    }
-    .right td.over{
-        background:#C1CD07;
-    }
-    .nodrop{
-        border-radius: 3px;
-        border: 1px solid #ddd;
-        background: #eee;
-        /*padding: 5px 0;*/
-    }
-    .item{
-        text-align:center;
-        background:#fff;
-        color:#444;
-        width:115px;
-        /*height: 32px;*/
-        /*padding: 5px 0;*/
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-    .left .item{
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-    .left li{
-        margin: 5px 8px;
-    }
-    .assigned{
-
-    }
-    .trash{
-        background-color:#f60;
-    }
-    .trash p{
-        color: #fff;
-        cursor: ;
-    }
-
-</style>
 
 <script src="../assets/js/lib/jquery.js"></script>
 <!--<script src="../assets/js/lib/jquery-easyui-1.4.2/src/easyloader.js"></script>-->
 <script src="../assets/js/require.js"></script>
 <script>
+
     var data = { "timetable": [
         { "joint": "第一节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师"},"tues":{"name":"语文","teach":"张老师"},"wed":{"name":"语文","teach":"张老师"},"thurs":{"name":"语文","teach":"张老师"},"fri":{"name":"语文","teach":"张老师"}},
         { "joint": "第二节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师"},"tues":{"name":"语文","teach":"张老师"},"wed":{"name":"语文","teach":"张老师"},"thurs":{"name":"语文","teach":"张老师"},"fri":{"name":"语文","teach":"张老师"}},
@@ -486,6 +357,7 @@
     "othertime":[{"beforerow":1,"starttime":"07:00","endtime":"08:00","text":"早读"},{"beforerow":3,"starttime":"09:00","endtime":"09:45","text":"课间操"}],
     "nodrop":["a2","a4"]
     };
+
     var teach_data = { "course": [
         { "name": "语文", "teach": "张老师" },
         { "name": "数学", "teach": "刘老师" },
@@ -503,9 +375,6 @@
        $(".drop-nav").find("fieldset").append(compiledTemplate);
         var timetable=course["./assets/js/core/template/timetable.handlebars"](data);
         $("#timetable").append(timetable)
-//        $("#timetable").find("tr").eq((data.morning.beforerow)-1).on("click",function(){
-//            console.log($(this))
-//        })
 
 
         $.each(data.othertime,function(i,val){
@@ -519,9 +388,6 @@
             console.log(data.nodrop[i]);
             $("td[data-map="+data.nodrop[i]+"]").removeClass().find("div").removeClass().addClass("nodrop")
         })
-//        $("td[data-map='a1']").removeClass().find("div").removeClass().addClass("nodrop")
-
-//        console.log(!data.lanch.beforerow)
     })
 
 

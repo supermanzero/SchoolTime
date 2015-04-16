@@ -3,16 +3,16 @@
  */
 easyloader.load(["draggable","droppable"],function(){
     $(function(){
-        $('.left .item').draggable({
+        $('.drop-nav .item').draggable({
             revert:true,
             proxy:'clone'
         });
-        $('.right .item').draggable({
+        $('.timetable .item').draggable({
             revert:true,
             proxy:'clone'
         });
 
-        $('.right td.drop').droppable({
+        $('.timetable td.drop').droppable({
             onDragEnter:function(){
                 $(this).addClass('over');
             },
@@ -38,7 +38,7 @@ easyloader.load(["draggable","droppable"],function(){
                 }
             }
         });
-        $('.left').droppable({
+        $('.drop-nav').droppable({
             accept:'.assigned',
             onDragEnter:function(e,source){
                 $(source).addClass('trash');

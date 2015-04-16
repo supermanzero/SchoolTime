@@ -268,3 +268,75 @@ select{
 .cmspages-dialog-bd .newcreate .ft-button a.cp-button{
     margin: 0 10px;
 }
+
+/*timetable*/
+.drop-nav {
+    width: 800px;
+    margin: auto;
+    padding: 20px 0;
+}
+.drop-nav .left{
+    /*width: 700px;*/
+    /*padding: 20px;*/
+    /*border-radius: 3px;*/
+    /*border: 1px solid #ddd;*/
+}
+.timetable table{
+    margin: auto;
+}
+.drop-nav fieldset{
+    padding:10px 0px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+.drop-nav fieldset legend{
+    margin-left: 15px;
+}
+.timetable-wrap .button {
+    text-align: right;
+    padding: 10px;
+}
+.timetable{
+    width: 800px;
+    margin: auto;
+}
+.timetable td.drop{
+    background:#fff;
+    width:115px;
+}
+.timetable td.over{
+    background:#C1CD07;
+}
+.timetable .nodrop{
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: #eee;
+    /*padding: 5px 0;*/
+}
+.timetable-wrap .item{
+    text-align:center;
+    background:#fff;
+    color:#444;
+    width:115px;
+    /*height: 32px;*/
+    /*padding: 5px 0;*/
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.timetable-wrap .left .item{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.timetable-wrap .left li{
+    margin: 5px 8px;
+}
+.timetable-wrap .assigned{
+
+}
+.timetable-wrap .trash{
+    background-color:#f60;
+}
+.timetable-wrap .trash p{
+    color: #fff;
+}
+/*timetable end*/
