@@ -51,13 +51,89 @@ select{
     padding: 8px;
     vertical-align: middle;
 }
-.pub-table thead td,.pub-table thead th{
+.pub-table thead th{
     border-bottom-width: 2px;
     background: #eee;
 }
-.pub-table .active{
-    background: #eee;
+.pub-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
 }
+
+.pub-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.pub-table td,
+.pub-table th {
+    display: table-cell;
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+   /* padding: 0.5em 1em;*/ /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+.pub-table td:first-child,
+.pub-table th:first-child {
+    border-left-width: 0;
+}
+
+.pub-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+.pub-table td {
+    background-color: transparent;
+}
+.pub-table-odd td {
+    background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+.pub-table-striped tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+.pub-table td {
+    border-bottom: 1px solid #cbcbcb;
+}
+.pub-table tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+
+.pub-table-horizontal td,
+.pub-table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+.pub-table-horizontal tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+/*.pub-table .active{*/
+    /*background: #eee;*/
+/*}*/
 .course-dialog select{
     width: 220px;
 }
@@ -275,11 +351,12 @@ select{
     margin: auto;
     padding: 20px 0;
 }
-.drop-nav .left{
-    /*width: 700px;*/
-    /*padding: 20px;*/
-    /*border-radius: 3px;*/
-    /*border: 1px solid #ddd;*/
+.drop-nav .left p.prompt{
+    color: #fff;
+    background: #C1CD07;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
 }
 .timetable table{
     margin: auto;
@@ -298,7 +375,7 @@ select{
 }
 .timetable{
     width: 800px;
-    margin: auto;
+    /*margin: auto;*/
 }
 .timetable td.drop{
     background:#fff;
@@ -307,7 +384,7 @@ select{
 .timetable td.over{
     background:#C1CD07;
 }
-.timetable .nodrop{
+.timetable .nodrop div{
     border-radius: 3px;
     border: 1px solid #ddd;
     background: #eee;
@@ -340,3 +417,5 @@ select{
     color: #fff;
 }
 /*timetable end*/
+
+

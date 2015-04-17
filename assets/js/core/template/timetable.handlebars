@@ -1,38 +1,49 @@
 {{#timetable}}
-<tr>
-    <td>
-        <p>{{joint}}</p>
-        <p>{{starttime}}-{{endtime}}</p>
-    </td>
-    <td class="drop" data-map="a1">
-        <div class="item assigned">
-            <p>{{mon.name}}</p>
-            <p>{{mon.teach}}</p>
-        </div>
-    </td>
-    <td class="drop" data-map="a2">
-        <div class="item assigned">
-            <p>{{tues.name}}</p>
-            <p>{{tues.teach}}</p>
-        </div>
-    </td>
-    <td class="drop" data-map="a3">
-        <div class="item assigned">
-            <p>{{wed.name}}</p>
-            <p>{{wed.teach}}</p>
-        </div>
-    </td>
-    <td class="drop" data-map="a4">
-        <div class="item assigned">
-            <p>{{thurs.name}}</p>
-            <p>{{thurs.teach}}</p>
-        </div>
-    </td>
-    <td class="drop" data-map="a5">
-        <div class="item assigned">
-            <p>{{fri.name}}</p>
-            <p>{{fri.teach}}</p>
-        </div>
-    </td>
-</tr>
+    {{#unless  activity}}
+        <tr>
+            <td>
+                <p>{{joint}}</p>
+                <p>{{starttime}}-{{endtime}}</p>
+            </td>
+            <td class="{{mon.drop}}" data-map="{{mon.map}}">
+                <div class="{{mon.cls.item}} {{mon.cls.assigned}}">
+                    <p>{{mon.name}}</p>
+                    <p>{{mon.teach}}</p>
+                </div>
+            </td>
+            <td class="{{tues.drop}}" data-map="{{tues.map}}">
+                <div class="{{tues.cls.item}} {{tues.cls.assigned}}">
+                    <p>{{tues.name}}</p>
+                    <p>{{tues.teach}}</p>
+                </div>
+            </td>
+            <td class="{{wed.drop}}" data-map="{{wed.map}}">
+                <div class="{{wed.cls.item}} {{wed.cls.assigned}}">
+                    <p>{{wed.name}}</p>
+                    <p>{{wed.teach}}</p>
+                </div>
+            </td>
+            <td class="{{thurs.drop}}" data-map="{{thurs.map}}">
+                <div class="{{thurs.cls.item}} {{thurs.cls.assigned}}">
+                    <p>{{thurs.name}}</p>
+                    <p>{{thurs.teach}}</p>
+                </div>
+            </td>
+            <td class="{{fri.drop}}" data-map="{{fri.map}}">
+                <div class="{{fri.cls.item}} {{fri.cls.assigned}}">
+                    <p>{{fri.name}}</p>
+                    <p>{{fri.teach}}</p>
+                </div>
+            </td>
+        </tr>
+    {{else}}
+        <tr>
+            <td>
+                <p>{{starttime}}-{{endtime}}</p>
+            </td>
+            <td colspan="5">
+                <p>{{activity}}</p>
+            </td>
+        </tr>
+    {{/unless }}
 {{/timetable}}

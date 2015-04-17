@@ -124,7 +124,7 @@
                     <div class="course-info-bd-tp">
                         <h3>二年级（1）班课程表</h3>
                         <ul class="">
-                            <li class="yui3-u"><a class="yui3-u cp-button" href="#">临时调课</a></li>
+                            <li class="yui3-u"><a class="yui3-u cp-button" href="#" data-dialog="#timetable">临时调课</a></li>
                             <li class="yui3-u"><a class="yui3-u cp-button easyui-menubutton" href="#" data-options="menu:'#more-box'">更多操作</a></li>
                         </ul>
                         <div id="more-box" class="menu-content">
@@ -485,7 +485,46 @@
     </div>
 </div>
 
+<div id="timetable-dialog" style="position: absolute;top: -9999px;">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>临时调整课程</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+        <div class="timetable-wrap">
+        <div class="drop-nav yui3-g">
+            <div class="left yui3-u-1">
+                <p class="prompt yui3-u">提示：将需要调整的课程拖到待排课程中，再重新拖到待排空位即可。</p>
+                <fieldset>
+                    <legend>待排课程</legend>
+                </fieldset>
 
+            </div>
+        </div>
+        <div class="timetable">
+            <table class="pub-table">
+                <thead>
+                    <tr>
+                        <th class="" style="width: 115px">时间</th>
+                        <th class="" style="width: 115px">周一</th>
+                        <th class="" style="width: 115px">周二</th>
+                        <th class="" style="width: 115px">周三</th>
+                        <th class="" style="width: 115px">周四</th>
+                        <th class="" style="width: 115px">周五</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable">
+
+                </tbody>
+            </table>
+            <div class="button">
+                <button class="yui3-u cp-button">保存</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
 <script src="../assets/js/lib/jquery.js"></script>
 <script src="../assets/js/require.js"></script>
 <script>
@@ -496,6 +535,45 @@
             $($(this).attr("getbox")).show()
         })
         $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+    })
+
+
+
+    /*课程表*/
+    var data = { "timetable": [
+        {"activity":"早读", "joint": "","starttime":"08:00","endtime":"08:45","mon":{"name":"","teach":""},"tues":{"name":"","teach":""},"wed":{"name":"","teach":""},"thurs":{"name":"","teach":""},"fri":{"name":"","teach":""}},
+        {"activity":"", "joint": "第一节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"a1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"a2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"a3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"a4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"a5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+        {"activity":"", "joint": "第二节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"b1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"b2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"b3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"b4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"b5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+        {"activity":"","joint": "第三节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+        {"activity":"","joint": "第三节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+        {"activity":"午休","joint": "","starttime":"12:00","endtime":"14:00","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}}
+    ]};
+
+    /*待排课程*/
+    var teach_data = { "course": [
+        { "name": "语文", "teach": "张老师" },
+        { "name": "数学", "teach": "刘老师" },
+        { "name": "英语", "teach": "张老师" },
+        { "name": "历史", "teach": "刘老师" },
+        { "name": "生物", "teach": "刘老师" },
+        { "name": "地理", "teach": "刘老师" }
+    ]};
+
+
+    require(["core/template/course"],function(course){
+        var compiledTemplate = course["./assets/js/core/template/course.handlebars"](teach_data);
+        $(".drop-nav").find("fieldset").append(compiledTemplate);
+        var timetable=course["./assets/js/core/template/timetable.handlebars"](data);
+
+//        $("#timetable").append(timetable);
+//        $.nmManual("#timetable-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+        $("#timetable").append(timetable);
+
+        $(".cp-button[data-dialog='#timetable']").on("click",function(){
+            $.nmManual(($(this).attr("data-dialog"))+"-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+//            console.log(1111)
+        })
+        require(["core/timetable"])
     })
 </script>
 </body>
