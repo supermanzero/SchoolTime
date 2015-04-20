@@ -2,7 +2,7 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["./assets/js/core/template/course.handlebars"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+this["JST"]["./assets/js/core/template/course.hbs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "    <li class=\"yui3-u\">\r\n        <div class=\"item\">\r\n            <p>"
@@ -19,7 +19,7 @@ this["JST"]["./assets/js/core/template/course.handlebars"] = Handlebars.template
   return buffer + "</ul>";
 },"useData":true});
 
-this["JST"]["./assets/js/core/template/timetable.handlebars"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+this["JST"]["./assets/js/core/template/timetable.hbs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
   return ((stack1 = helpers.unless.call(depth0,(depth0 != null ? depth0.activity : depth0),{"name":"unless","hash":{},"fn":this.program(2, data, 0),"inverse":this.program(4, data, 0),"data":data})) != null ? stack1 : "");

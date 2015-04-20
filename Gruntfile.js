@@ -83,6 +83,10 @@ module.exports = function(grunt) {
             stylesheets: {
                 files: './assets/work/css/*.css',
                 tasks: ['concat:css']
+            },
+            hbs:{
+                files:"./assets/js/core/template/*.handlebars",
+                tasks:["handlebars"]
             }
         },
         handlebars: {
@@ -92,7 +96,7 @@ module.exports = function(grunt) {
                     amd:true
                 },
                 files: {
-                    "./assets/js/core/template/course.js": ["./assets/js/core/template/*.handlebars"]
+                    "./assets/js/core/template/course.js": ["./assets/js/core/template/*.hbs"]
                 }
             }
         }
@@ -107,6 +111,7 @@ module.exports = function(grunt) {
 
 
     // 注册任务
-//    grunt.registerTask('default', ['watch:stylesheets']);
     grunt.registerTask('default', ['handlebars']);
+//    grunt.registerTask('default', ['watch:hbs']);
+//    grunt.registerTask('default', ['handlebars']);
 };
