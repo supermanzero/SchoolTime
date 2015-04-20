@@ -2,6 +2,22 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
+this["JST"]["./assets/js/core/template/changTeach.hbs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "    <option value=\""
+    + alias2(alias1(depth0, depth0))
+    + "\">"
+    + alias2(alias1(depth0, depth0))
+    + "</option>\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<select name=\"\" id=\"\">\r\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.teach : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</select>";
+},"useData":true});
+
 this["JST"]["./assets/js/core/template/course.hbs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 

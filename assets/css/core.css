@@ -351,7 +351,7 @@ striping:
     margin: auto;
     padding: 20px 0;
 }
-.drop-nav .left p.prompt{
+p.prompt{
     color: #fff;
     background: #C1CD07;
     padding: 10px;
@@ -418,4 +418,30 @@ striping:
 }
 /*timetable end*/
 
-
+/*change-teach*/
+.change-teach{
+    position: relative;
+}
+.change-teach .cp-button{
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.change-teach .prompt{
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+}
+.change-teach tbody td select{
+    width: 80px;
+    padding: 0px 5px;
+    display: none;
+    margin: 3px 0 0;
+    font-size: 12px;
+}
+.change-teach tbody td{
+    height: 40px;
+}
+.change-teach tbody td.on select{
+    display: inline-block;
+}
+/*change-teach end*/

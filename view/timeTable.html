@@ -471,6 +471,162 @@
     </div>
 </div>
 
+<div id="change-teach" style="display: none;">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>临时调课</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog change-teach">
+                <p class="prompt yui3-u">提示：点击需要更换的教师，重新选择教师即可。</p>
+                <button class="yui3-u cp-button">保存</button>
+                <table class="pub-table" style="width: 800px">
+                <thead>
+                <tr>
+                    <th class="yui3-u-1-6">时间</th>
+                    <th class="yui3-u-1-6">周一</th>
+                    <th class="yui3-u-1-6">周二</th>
+                    <th class="yui3-u-1-6">周三</th>
+                    <th class="yui3-u-1-6">周四</th>
+                    <th class="yui3-u-1-6">周五</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <p>7:40-8:00</p>
+                    </td>
+                    <td colspan="5">
+                        <p>早读</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>第一节</p>
+                        <p>8:00-8:45</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>第二节</p>
+                        <p>8:55-9:40</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>9:40-10:00</p>
+                    </td>
+                    <td colspan="5">
+                        <p>课间操</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>第三节</p>
+                        <p>10:00-10:45</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>10:45-11:05</p>
+                    </td>
+                    <td colspan="5">
+                        <p>眼保健操</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>第四节</p>
+                        <p>11:05-11:50</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                    <td>
+                        <p>语文</p>
+                        <p>李晓军</p>
+                    </td>
+                    <td>
+                        <p>数学</p>
+                        <p>张红</p>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--临时调课-->
 <div id="timetable-dialog" style="position: absolute;top: -9999px;">
     <div class="cmspages-dialog">
@@ -518,7 +674,6 @@
 <script src="../assets/js/require.js"></script>
 <script>
     require(["easyui/easyloader","lib/dialog"],function(){
-        easyloader.load("numberbox");
         $(".tablink").on("click",function(){
             $(this).closest(".export-table").hide()
             $($(this).attr("getbox")).show()
@@ -553,17 +708,38 @@
         { "name": "地理", "teach": "刘老师" }
     ]};
 
+    var changteach={
+        teach:["吴老师","张老师","王老师"]
+    }
+
 
     require(["core/template/course"],function(course){
+        $(".change-teach tbody").find("td").find("p:last").on("mouseover",function(){
+            $(this).css({"cursor":"pointer"})
+        }).on("click",function(){
+            if($(this).closest("td").index()>0 && !($(this).closest("td").attr("colspan"))){
+                if($(this).next("select").length<1){
+                    var teachdata=course["./assets/js/core/template/changTeach.hbs"](changteach);
+                    console.log(teachdata)
+                    $(this).after(teachdata)
+                }
+                var that=$(this);
+                $(this).hide().closest("td").addClass("on").find("select").focus().on("focusout",function(event){
+                    that.text($(this).val()).show();
+                    $(this).closest("td").removeClass("on");
+                    console.log($(this).val())
+                })
+            }
+        })
+
+        $.nmManual("#change-teach", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+//        $("#timetable").append(timetable);
+//        $.nmManual("#timetable-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+
         var compiledTemplate = course["./assets/js/core/template/course.hbs"](teach_data);
         $(".drop-nav").find("fieldset").append(compiledTemplate);
         var timetable=course["./assets/js/core/template/timetable.hbs"](data);
-
-        $.nmManual("#teach-or-course", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
-//        $("#timetable").append(timetable);
-//        $.nmManual("#timetable-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
         $("#timetable").append(timetable);
-
         $(".cp-button[data-dialog='#timetable']").on("click",function(){
             $.nmManual(($(this).attr("data-dialog"))+"-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
 //            console.log(1111)
