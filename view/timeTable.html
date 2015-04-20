@@ -379,52 +379,6 @@
 </div>
 
 
-<div id="add-course" style="display: none">
-    <div class="cmspages-dialog">
-        <div class="cmspages-dialog-hd">
-            <h3>新增课程</h3>
-        </div>
-        <div class="cmspages-dialog-bd">
-            <div class="course-dialog add-course">
-                <ul class="cmspages-dialog-bind-account">
-                    <li class="yui3-g">
-                        <label class="yui3-u">课程名称：</label>
-                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">年级：</label>
-                        <select name="" id="" class="yui3-u">
-                            <option value="">一年级</option>
-                            <option value="">二年级</option>
-                            <option value="">三年级</option>
-                        </select>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">学段课程：</label>
-                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">课程等级：</label>
-                        <select name="" id="" class="yui3-u">
-                            <option value="">国家课程</option>
-                            <option value="">国家课程</option>
-                            <option value="">国家课程</option>
-                        </select>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">周课时数：</label>
-                        <input type="number" class="easyui-numberbox easyui-validatebox" name="hour" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u"></label>
-                        <input class="yui3-u cp-button" type="submit" value="新增">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="create-table" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -485,6 +439,39 @@
     </div>
 </div>
 
+<div id="teach-or-course" style="display: none">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>临时调课</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="course-dialog teach-or-course">
+                <ul class="cmspages-dialog-bind-account">
+                    <li class="yui3-g">
+                        <label class="yui3-u">时间：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="1">第1周</option>
+                            <option value="1">第2周</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u">调课类型：</label>
+                        <select name="" id="" class="yui3-u">
+                            <option value="1">调换课程</option>
+                            <option value="1">更换教师</option>
+                        </select>
+                    </li>
+                    <li class="yui3-g">
+                        <label class="yui3-u"></label>
+                        <button class="yui3-u cp-button">确定</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--临时调课-->
 <div id="timetable-dialog" style="position: absolute;top: -9999px;">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -525,6 +512,8 @@
         </div>
     </div>
 </div>
+<!--临时调课 end-->
+
 <script src="../assets/js/lib/jquery.js"></script>
 <script src="../assets/js/require.js"></script>
 <script>
@@ -540,7 +529,12 @@
 
 
     /*课程表*/
-    var data = { "timetable": [
+    var data = {
+        "school":"广州市荔湾区环翠园小学",
+        "semester":"2015年第一学期",
+        "grade":"5",
+        "class":"1",
+        "timetable": [
         {"activity":"早读", "joint": "","starttime":"08:00","endtime":"08:45","mon":{"name":"","teach":""},"tues":{"name":"","teach":""},"wed":{"name":"","teach":""},"thurs":{"name":"","teach":""},"fri":{"name":"","teach":""}},
         {"activity":"", "joint": "第一节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"a1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"a2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"a3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"a4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"a5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
         {"activity":"", "joint": "第二节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"b1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"b2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"b3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"b4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"b5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
@@ -565,6 +559,7 @@
         $(".drop-nav").find("fieldset").append(compiledTemplate);
         var timetable=course["./assets/js/core/template/timetable.hbs"](data);
 
+        $.nmManual("#teach-or-course", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
 //        $("#timetable").append(timetable);
 //        $.nmManual("#timetable-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
         $("#timetable").append(timetable);
