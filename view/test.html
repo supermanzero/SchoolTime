@@ -3,149 +3,17 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <style>
-        .nyroModalLink{
-            padding: 0;
-        }
-        .teach-table th{
-            width: 16.6667%;
-        }
-        .teach-table-tab{
-            position: relative;
-            width: 200px;
-            margin: 0 auto 10px;
-            text-align: center;
-            padding: 10px 0;
-            background: #ddd;
-            border-radius: 3px;
-        }
-        .teach-table-tab a{
-            position: absolute;
-            top: 6px;
-        }
-        .teach-table-tab a.prev{
-            left: 10px;
-        }
-        .teach-table-tab a.next{
-            right: 10px;
-        }
-    </style>
+
 </head>
 <body>
-<div id="teach-table" style="width: 800px">
-    <div class="cmspages-dialog">
-        <div class="cmspages-dialog-hd">
-            <h3>教师课程表</h3>
-        </div>
-        <div class="cmspages-dialog-bd">
-            <div class="course-dialog teach-table">
-                <div class="teach-table-tab">
-                    <a href="./test.html" class="nyroModal prev"><i class="fa fa-arrow-circle-left fa-2x"></i></a>
-                    <a href="./test.html" class="nyroModal next"><i class="fa fa-arrow-circle-right fa-2x"></i></a>
-                    <p>第2周 2014-10</p>
-                </div>
+<script src="../assets/js/lib/jquery.js"></script>
+<script src="../assets/js/require.js"></script>
+<script>
+    require(["core/test"],function(dt){
+        dt.kk()
+    })
 
-                <table class="pub-table">
-                    <thead>
-                    <tr>
-                        <th>时间</th>
-                        <th>周一</th>
-                        <th>周二</th>
-                        <th>周三</th>
-                        <th>周四</th>
-                        <th>周五</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <p>第一节</p>
-                            <p>08:00-09:00</p>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>第二节</p>
-                            <p>09:00-10:00</p>
-                        </td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>第三节</p>
-                            <p>11:00-12:00</p>
-                        </td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td></td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>第四节</p>
-                            <p>11:00-12:00</p>
-                        </td>
-                        <td>
-                            <p>语文</p>
-                            <p>一年级1班</p>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>第五节</p>
-                            <p>12:00-13:00</p>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>第六节</p>
-                            <p>13:00-14:00</p>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+ </script>
 </body>
+
 </html>

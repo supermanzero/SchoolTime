@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/yahoo-reset.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/dialog.css"/>
+    <link rel="stylesheet" href="../assets/css/base.css"/>
+    <link rel="stylesheet" href="../assets/css/core.css"/>
+    <link rel="stylesheet" href="../assets/css/setClass.css"/>
+    <link rel="stylesheet" href="../assets/js/lib/artDialog4/skins/default.css">
+    <link rel="stylesheet" href="../assets/js/lib/jquery-easyui-1.4.2/themes/bootstrap/tree.css">
+</head>
+<body>
+<!--user-menu-->
+<div class="user-menu yui3-g">
+    <div class="user-menu-hd yui3-u">
+        <a href="" class="yui3-u easyui-menubutton" data-options="menu:'#user-menu-content'">ASDFSDF<i class="fa fa-caret-down fa-blue fa-3x"></i></a>
+        <div id="user-menu-content" class="menu-content" style="position: absolute;">
+            <div class="user-menu-content-bd">
+                <i class="fa fa-caret-up fa-2x"></i>
+                <ul>
+                    <li>
+                        <a href="../message.html">消息</a>
+                    </li>
+                    <li>
+                        <a href="../bind.html">绑定</a>
+                    </li>
+                    <li>
+                        <a href="../userinfo-set.html">设置</a>
+                    </li>
+                    <li>
+                        <a href="">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--user-menu end-->
+
+<!--pub-head-->
+<div class="pub-head yui3-g">
+    <div class="yui3-u pub-head-logo">
+        <a class="logo" href=""></a>
+    </div>
+    <div class="yui3-u pub-head-main">
+        <!--cmspages-head-->
+        <div class="cmspages-head yui3-g">
+            <div class="cmspages-head-menu yui3-u" >
+                <!--<img class="yui3-u" src="http://lorempixel.com/48/48/cats/" alt=""/>-->
+                <label class="yui3-u">东田教育教务管理系统</label>
+                <!--<i class="fa fa-angle-down fa-3x"></i>-->
+            </div>
+        </div>
+        <!--cmspages-head end-->
+    </div>
+</div>
+<!--pub-head end-->
+
+<div class="cmspages">
+    <div class="cmspages-layout yui3-g">
+        <div class="cmspages-content-menu yui3-u">
+            <div class="cmspages-content-menu-bd">
+                <ul>
+                    <li>
+                        <a class="on" href="javascript:void(0)">班级设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">授课教师设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课时设置</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">课程设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cmspages-content yui3-u">
+            <div class="pub-breadcrumb-wrap mr10">
+                <div class="pub-heading-tips">
+                    <span class="tips">1、新建排课任务<em class="rarr">&rarr;</em>2、添加约束条件<em class="rarr">&rarr;</em>3、自动排课</span>
+                </div>
+            </div>
+            <div class="course-info-head">
+                <select name="" id="" class="yui3-u  mr10">
+                    <option value="">全校课程表总视图</option>
+                    <option value="">全校课程表小班视图</option>
+                    <option value="">教师课程表视图</option>
+                    <option value="">班级课程表视图</option>
+                </select>
+                <select name="" id="" class="yui3-u select-menu mr10">
+                    <option value="">选择科目</option>
+                    <option value="">语文</option>
+                    <option value="">数学</option>
+                    <option value="">英语</option>
+                </select>
+                <select name="" id="" class="yui3-u select-menu mr10">
+                    <option value="">选择教师</option>
+                    <option value="">张三</option>
+                    <option value="">李四</option>
+                </select>
+                <a href="javascript:void(0);" class="yui3-u cp-button mr10">查询</a>
+                <a href="javascript:void(0);" class="yui3-u cp-button fr mr10 transfer-courses" href="#" data-dialog="#timetable">手动调课</a>
+            </div>
+            <div class="course-info-bd mr10">
+                <table class="pub-table">
+                    <thead>
+                    <tr>
+                        <th width="20%">时间</th>
+                        <th>周一</th>
+                        <th>周二</th>
+                        <th>周三</th>
+                        <th>周四</th>
+                        <th>周五</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <p>第一节</p>
+                            <p>08:00-09:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第二节</p>
+                            <p>09:00-10:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第三节</p>
+                            <p>11:00-12:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第四节</p>
+                            <p>11:00-12:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第五节</p>
+                            <p>12:00-13:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>第六节</p>
+                            <p>13:00-14:00</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer-btn-box">
+                <button class="yui3-u cp-button mr10">重新自动排课</button>
+                <button class="yui3-u cp-button">完成调课，保存课表</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 手动调课 start-->
+<div id="timetable-dialog" style="position: absolute;top: -9999px;">
+    <div class="cmspages-dialog">
+        <div class="cmspages-dialog-hd">
+            <h3>手动排课</h3>
+        </div>
+        <div class="cmspages-dialog-bd">
+            <div class="timetable-wrap">
+                <div class="drop-nav yui3-g">
+                    <div class="left yui3-u-1">
+                        <p class="prompt yui3-u">提示：将需要调整的课程拖到待排课程中，再重新拖到待排空位即可。</p>
+                        <fieldset>
+                            <legend>待排课程</legend>
+                        </fieldset>
+
+                    </div>
+                </div>
+                <div class="timetable">
+                    <table class="pub-table">
+                        <thead>
+                        <tr>
+                            <th class="" style="width: 115px">时间</th>
+                            <th class="" style="width: 115px">周一</th>
+                            <th class="" style="width: 115px">周二</th>
+                            <th class="" style="width: 115px">周三</th>
+                            <th class="" style="width: 115px">周四</th>
+                            <th class="" style="width: 115px">周五</th>
+                        </tr>
+                        </thead>
+                        <tbody id="timetable">
+
+                        </tbody>
+                    </table>
+                    <div class="button">
+                        <button class="yui3-u cp-button">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 手动调课 end-->
+
+<script src="../assets/js/lib/jquery.js"></script>
+<script src="../assets/js/require.js"></script>
+<script>
+    /*课程表*/
+    var data = {
+        "school":"广州市荔湾区环翠园小学",
+        "semester":"2015年第一学期",
+        "grade":"5",
+        "class":"1",
+        "timetable": [
+            {"activity":"早读", "joint": "","starttime":"08:00","endtime":"08:45","mon":{"name":"","teach":""},"tues":{"name":"","teach":""},"wed":{"name":"","teach":""},"thurs":{"name":"","teach":""},"fri":{"name":"","teach":""}},
+            {"activity":"", "joint": "第一节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"a1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"a2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"a3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"a4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"a5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+            {"activity":"", "joint": "第二节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"b1","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"tues":{"name":"语文","teach":"张老师","map":"b2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"b3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"b4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"b5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+            {"activity":"","joint": "第三节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+            {"activity":"","joint": "第三节","starttime":"08:00","endtime":"08:45","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}},
+            {"activity":"午休","joint": "","starttime":"12:00","endtime":"14:00","mon":{"name":"语文","teach":"张老师","map":"c1","drop":"nodrop","cls":{"item":"","assigned":""}},"tues":{"name":"语文","teach":"张老师","map":"c2","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"wed":{"name":"语文","teach":"张老师","map":"c3","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"thurs":{"name":"语文","teach":"张老师","map":"c4","drop":"drop","cls":{"item":"item","assigned":"assigned"}},"fri":{"name":"语文","teach":"张老师","map":"c5","drop":"drop","cls":{"item":"item","assigned":"assigned"}}}
+        ]};
+
+    /*待排课程*/
+    var teach_data = { "course": [
+        { "name": "语文", "teach": "张老师" },
+        { "name": "数学", "teach": "刘老师" },
+        { "name": "英语", "teach": "张老师" },
+        { "name": "历史", "teach": "刘老师" },
+        { "name": "生物", "teach": "刘老师" },
+        { "name": "地理", "teach": "刘老师" }
+    ]};
+
+    var changteach={
+        teach:["吴老师","张老师","王老师"]
+    }
+    require(["easyui/easyloader","lib/dialog","core/template/course"],function(easyloader,dialogm,course){
+        var compiledTemplate = course["./assets/js/core/template/course.hbs"](teach_data);
+        $(".drop-nav").find("fieldset").append(compiledTemplate);
+        var timetable=course["./assets/js/core/template/timetable.hbs"](data);
+        $("#timetable").append(timetable);
+
+        $(".cp-button[data-dialog='#timetable']").on("click",function(){
+            $.nmManual(($(this).attr("data-dialog"))+"-dialog", {closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
+//            console.log(1111)
+        })
+        require(["core/timetable"])
+    })
+</script>
+</body>
+</html>

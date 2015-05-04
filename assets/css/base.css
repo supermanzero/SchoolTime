@@ -164,7 +164,7 @@ input[type="submit"]{
     display: block;
     padding: 10px;
 }
-.pub-tabs .active a{
+.pub-tabs .active a, .pub-tabs a:hover{
     background: #F0F0F0;
 }
 /*标签选项卡 end*/

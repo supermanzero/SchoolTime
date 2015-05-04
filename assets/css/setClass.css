@@ -1,0 +1,388 @@
+.pub-heading-tips{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    font-size: 18px;
+    color: #666;
+    min-width: 880px;
+}
+.pub-heading-tips .tips{
+    margin-left: 15px;
+}
+.pub-heading-tips .tips .rarr{
+    font-size: 26px;
+    margin: 0 8px;
+}
+.content-main{
+    margin-top: 20px;
+    border: solid 1px #f5f5f5;
+    border-radius: 4px;
+    padding: 20px;
+    min-width: 880px;
+}
+.form-grounp label{
+    font-size: 14px;
+}
+.input-control{
+    width: 175px;
+    height: 28px;
+    border: solid 1px #ddd;
+    padding: 0 10px;
+    color: #666;
+}
+.input-control:focus, .input-control:after, .input-control:active{
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.cheack-box{
+    float: left;
+    width: 680px;
+}
+.cheack-box .cheack-box-sub{
+    float: left;
+    width: 680px;
+}
+.cheack-box .cheack-grounp{
+    float: right;
+    display: block;
+    width: 600px;
+}
+.cheack-box .cheack-grounp .grounp-list{
+    display: inline-block;
+    width: 70px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+.cheack-box .cheack-grounp .grounp-list label{
+    font-size: 12px;
+}
+.cheack-box .cheack-grounp .grounp-list input[type="checkbox"]{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+.textbox {
+    position: relative;
+    /* border: 1px solid #D3D3D3; */
+    background-color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* margin: 0; */
+    /* padding: 0; */
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    width: 175px;
+}
+.textbox-addon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.datebox .combo-arrow {
+    background-image: url('../images/datebox_arrow.png');
+    background-position: center center;
+}
+.combo-arrow {
+    background-color: #E0ECFF;
+}
+.combo-arrow {
+    background: url('../images/combo_arrow.png') no-repeat center center;
+}
+.combo-arrow {
+    width: 18px;
+    height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.textbox-icon {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: top;
+    background-position: center center;
+    cursor: pointer;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    text-decoration: none;
+}
+.panel {
+    overflow: hidden;
+    text-align: left;
+    margin: 0;
+    border: 0;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.calendar-header {
+    background: #E0ECFF;
+}
+.calendar-header {
+    position: relative;
+    height: 22px;
+}
+.datebox-calendar-inner.panel-noscroll {
+    left: 20px;
+    background: url('../images/calendar_arrows.png') no-repeat -18px -2px;
+}
+.datebox-calendar-inner {
+    height: 180px;
+}
+.panel-noscroll {
+    overflow: hidden;
+}
+.calendar-prevmonth, .calendar-nextmonth, .calendar-prevyear, .calendar-nextyear {
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    font-size: 1px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.calendar-prevmonth {
+    left: 20px;
+    background: url('../images/calendar_arrows.png') no-repeat -18px -2px;
+}
+.calendar-nextmonth {
+    right: 20px;
+    background: url('../images/calendar_arrows.png') no-repeat -34px -2px;
+}
+.calendar-prevyear {
+    left: 3px;
+    background: url('../images/calendar_arrows.png') no-repeat -1px -2px;
+}
+.calendar-nextyear {
+    right: 3px;
+    background: url('../images/calendar_arrows.png') no-repeat -49px -2px;
+}
+.calendar-title {
+    text-align: center;
+    height: 22px;
+}
+.calendar-title span {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    padding: 0 3px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    cursor: pointer;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.calendar table {
+    table-layout: fixed;
+    border-collapse: separate;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.calendar table td, .calendar table th {
+    font-size: 12px;
+}
+.calendar-body th {
+    background: #F4F4F4;
+    padding: 2px 0;
+}
+.calendar-body th, .calendar-menu-month {
+    color: #4d4d4d;
+}
+.calendar-body th, .calendar-body td {
+    text-align: center;
+}
+.calendar table td, .calendar table th {
+    font-size: 12px;
+}
+.calendar-body th, .calendar-body td {
+    text-align: center;
+}
+.calendar-sunday {
+    color: #CC2222;
+}
+.calendar-day {
+    color: #000000;
+}
+.calendar-other-month {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.calendar-day {
+    border: 0;
+    padding: 1px;
+    cursor: pointer;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.calendar table td, .calendar table th {
+    font-size: 12px;
+}
+.calendar-body th, .calendar-body td {
+    text-align: center;
+}
+.calendar-saturday {
+    color: #00ee00;
+}
+.calendar-sunday {
+    color: #CC2222;
+}
+.calendar-selected {
+    background-color: #ffe48d;
+    color: #000000;
+    border: 1px solid #ffab3f;
+    padding: 0;
+}
+.calendar-hover,
+.calendar-nav-hover,
+.calendar-menu-hover {
+    background-color: #eaf2ff;
+    color: #000000;
+}
+.calendar-hover{
+    border: solid 1px #b7d2ff;
+    padding: 0;
+}
+.calendar-nav-hover{
+    border: solid 1px #b7d2ff;
+    padding: 0;
+}
+.datebox-button {
+    background-color: #F4F4F4;
+}
+.datebox-button {
+    height: 18px;
+    padding: 2px 5px;
+    text-align: center;
+}
+.datebox-button a {
+    color: #444;
+}
+.datebox-button a {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.sum{
+    padding-left: 100px;
+    margin-top: 8px;
+}
+.btn-box{
+    padding-left: 100px;
+}
+.add-ctrl{
+    height: 50px;
+    line-height: 50px;
+    color: #666;
+    margin: 10px 0;
+    min-width: 880px;
+}
+.add-ctrl .add-btn{
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+}
+.user-ctrl{
+    cursor: pointer;
+}
+.user-ctrl:hover{
+    text-decoration: underline;
+}
+.select-menu{
+    width: 120px
+}
+.choose-obj{
+    height: 33px;
+    line-height: 33px;
+}
+#constraint .tab-box{
+    width: 504px;
+}
+#object .obj-box{
+    float: left;
+    width: 200px;
+    border: solid 1px #eee;
+}
+#object .teacher-box{
+    width: 400px;
+    border: solid 1px #eee;
+}
+#object .obj-box .heading, #object .teacher-box .heading{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #666;
+    border-bottom: solid 1px #eee;
+}
+#object .obj-box .choose-box, #object .teacher-box .choose-box{
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.sub-menu, .sub-menu li a{
+    height: 20px;
+    line-height: 20px;
+}
+.sub-menu li a{
+    padding: 0 10px;
+}
+#constraint .tab-box .strong-tips{
+    display: inline-block;
+    margin-top: 6px;
+    color: #666;
+}
+#constraint .tab-box .save-input{
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+}
+#school .obj-box{
+    width: 200px;
+    height: 200px;
+    border: solid 1px #eee;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#constraint .tab-content{
+    height: 84px;
+}
+.course-info-head{
+    margin: 20px 0;
+}
+.footer-btn-box{
+    margin: 20px 0;
+}
