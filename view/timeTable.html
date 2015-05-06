@@ -674,7 +674,9 @@
 <script src="../assets/js/require.js"></script>
 <script>
     require(["easyui/easyloader","lib/dialog"],function(){
-        require(["core/timetable"])
+        require(["core/timetable"],function(timetable){
+            timetable.sequence()
+        })
         $(".tablink").on("click",function(){
             $(this).closest(".export-table").hide()
             $($(this).attr("getbox")).show()
