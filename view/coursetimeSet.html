@@ -255,27 +255,34 @@
                     </li>
                 </ul>
 
-                <table id="dg" class="easyui-datagrid" title="" style="width:498px;height:240px">
+                <table class="pub-table">
                     <thead>
-                        <tr>
-                            <th data-options="field:'starttime',width:210,align:'right',editor:{type:'timespinner',options:{required:true}}">上课时间</th>
-                            <th data-options="field:'endtime',width:210,align:'right',editor:{type:'timespinner',options:{required:true}}">下课时间</th>
-                            <th data-options="field:'ck',checkbox:true"></th>
-                        </tr>
+                    <tr>
+                        <th width="100px">第几节</th>
+                        <th width="100px">时间</th>
+                        <th width="100px">操作</th>
+                    </tr>
                     </thead>
+                    <tbody id="getTeachgroup-tbody">
+                    <tr>
+                        <td>1</td>
+                        <td>09:00-10:00</td>
+                        <td>
+                            <button class="yui3-u cp-button del-teachgroup">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="3"><button class="yui3-u cp-button add-teachgroup">新增</button></td>
+                    </tr>
+                    </tfoot>
                 </table>
 
-                <div class="toolbar" id="tb" style="height:auto;">
-                    <a href="javascript:void(0)" class="addteach yui3-u cp-button cp-button-grev"><i class="fa fa-plus-square fa-1x"></i>新增</a>
-                    <a href="javascript:void(0)" class="removeteach yui3-u cp-button cp-button-grev"><i class="fa fa-minus-square fa-1x"></i>删除</a>
-                    <a href="javascript:void(0)" class="saveteach yui3-u cp-button cp-button-grev"><i class="fa fa-floppy-o fa-1x"></i>保存修改</a>
-                </div>
-                <button class="cp-button getData">getData</button>
-                <div style="display: none"><input class="easyui-timespinner"></div>
             </div>
         </div>
-        <div class="cmspages-dialog-ft">
-            <input class="cp-button" type="submit" value="确定"/>
+        <div class="cmspages-dialog-ft" style="text-align: right">
+            <input class="cp-button" type="submit" value="保存"/>
         </div>
     </div>
 </div>
@@ -363,7 +370,8 @@
 <script src="../assets/js/require.js"></script>
 <script>
     var json_url="/SchoolTime/coursetime_data.json"
-    require(["lib/dialog","core/getTeachgroup"],function(){
+    require(["lib/dialog","core/coursetime"],function(dialog,coursetime){
+//        coursetime.init()
         $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
     })
 

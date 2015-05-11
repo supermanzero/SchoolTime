@@ -213,26 +213,27 @@
         </div>
         <div class="cmspages-dialog-bd">
             <div class="getTeachgroup">
-                <table id="dg" class="easyui-datagrid" title="" style="width:330px;height:240px">
+                <table class="pub-table">
                     <thead>
                     <tr>
-                        <th data-options="field:'_id',width:250,hidden:true"></th>
-                        <th data-options="field:'name',width:250,editor:{type:'validatebox',options:{required:true}}">教师组</th>
-                        <th data-options="field:'ck',checkbox:true"></th>
-                        <!--<th data-options="field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}">Status</th>-->
+                        <th>教师组</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
+                    <tbody id="getTeachgroup-tbody">
+                        <tr>
+                            <td>语文组</td>
+                            <td>
+                                <button class="yui3-u cp-button del-teachgroup">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><button class="yui3-u cp-button add-teachgroup">新增</button></td>
+                        </tr>
+                    </tfoot>
                 </table>
-
-                <div class="toolbar" id="tb" style="height:auto;">
-                    <a href="javascript:void(0)" class="addteach yui3-u cp-button cp-button-grev"><i class="fa fa-plus-square fa-1x"></i>新增</a>
-                    <a href="javascript:void(0)" class="removeteach yui3-u cp-button cp-button-grev"><i class="fa fa-minus-square fa-1x"></i>删除</a>
-                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="removeit()"><i class="fa fa-minus-square fa-1x"></i>删除</a>-->
-                    <a href="javascript:void(0)" class="saveteach yui3-u cp-button cp-button-grev"><i class="fa fa-floppy-o fa-1x"></i>保存修改</a>
-                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="reject()">Reject</a>-->
-                    <!--<a href="javascript:void(0)" class="yui3-u cp-button cp-button-grev" onclick="getChanges()">GetChanges</a>-->
-                </div>
-                <button class="cp-button getData">getData</button>
             </div>
         </div>
     </div>
@@ -263,11 +264,17 @@
 <script src="../assets/js/require.js"></script>
 <script>
     var json_url="/SchoolTime/datagrid_data1.json"
-    require(["lib/dialog","core/getTeachgroup"],function(){
+    require(["lib/dialog","core/Teachgroup"],function(dialog,Teachgroup){
+        Teachgroup.init()
         $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
     })
 
     $(function(){
+        $(".teachgroup-val").on("focusout",function(){
+
+            console.log($(this).validatebox('isValid'))
+        })
+
         $(".getData").on("click",function(){
             var msg=$("#dg").datagrid("getData")
             $.each(msg.rows,function(i,val){

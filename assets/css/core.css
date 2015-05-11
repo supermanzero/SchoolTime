@@ -460,3 +460,16 @@ p.prompt{
     display: inline-block;
 }
 /*change-teach end*/
+
+
+/*teachSet*/
+.getTeachgroup{
+    min-height: 400px;
+}
+.getTeachgroup thead th{
+    width: 200px;
+}
+.pub-table tfoot td{
+    border-top:1px solid #ddd;
+}
+/*teachSet end*/
