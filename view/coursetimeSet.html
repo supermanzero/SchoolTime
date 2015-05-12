@@ -252,33 +252,35 @@
                     </li>
                     <li class="yui3-u">
                         <label><input type="checkbox"/>周日</label>
-                    </li>
+                </li>
                 </ul>
-
-                <table class="pub-table">
+                <table class="pub-table course-time-table">
                     <thead>
                     <tr>
-                        <th width="100px">第几节</th>
-                        <th width="100px">时间</th>
-                        <th width="100px">操作</th>
+                        <th width="120px">第几节</th>
+                        <th width="120px">时间</th>
+                        <th width="120px">操作</th>
                     </tr>
                     </thead>
-                    <tbody id="getTeachgroup-tbody">
-                    <tr>
-                        <td>1</td>
-                        <td>09:00-10:00</td>
-                        <td>
-                            <button class="yui3-u cp-button del-teachgroup">删除</button>
-                        </td>
-                    </tr>
+                    <tbody class="course-time-tbody">
+                        <tr data-starttime=0900 data-endtime=1000>
+                            <td><span data-courseid=1>1</span></td>
+                            <td>09:00-10:00</td>
+                            <td>
+                                <button class="yui3-u cp-button del-course">删除</button>
+                            </td>
+                        </tr>
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td colspan="3"><button class="yui3-u cp-button add-teachgroup">新增</button></td>
+                        <td colspan="3">
+                            <!--<button class="yui3-u cp-button add-course">新增</button>-->
+                            <a href="javascript:void(0)" class="add-course"><i class="fa fa-plus-square fa-2x fa-green"></i></a>
+                        </td>
                     </tr>
                     </tfoot>
                 </table>
-
+                <div id="timepicker" style="display: none"><input style="width: 40px;" type="text" name="" class="easyui-validatebox coursetime-val yui3-u" id="date_timepicker_start"/> <em class="yui3-u" style="margin-top: 5px;">-</em> <input style="width: 40px;" type="text" name="" class="easyui-validatebox coursetime-val yui3-u" id="date_timepicker_end"/> </div>
             </div>
         </div>
         <div class="cmspages-dialog-ft" style="text-align: right">
@@ -370,8 +372,10 @@
 <script src="../assets/js/require.js"></script>
 <script>
     var json_url="/SchoolTime/coursetime_data.json"
-    require(["lib/dialog","core/coursetime"],function(dialog,coursetime){
-//        coursetime.init()
+    require(["easyui/easyloader","lib/dialog"],function(){
+        require(["core/Coursetime"],function(coursetime){
+            coursetime.init()
+        })
         $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
     })
 

@@ -230,7 +230,10 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="2"><button class="yui3-u cp-button add-teachgroup">新增</button></td>
+                            <td colspan="2">
+                                <!--<button class="yui3-u cp-button add-teachgroup">新增</button>-->
+                                <a href="javascript:void(0)" class="add-teachgroup"><i class="fa fa-plus-square fa-2x fa-green"></i></a>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -264,8 +267,10 @@
 <script src="../assets/js/require.js"></script>
 <script>
     var json_url="/SchoolTime/datagrid_data1.json"
-    require(["lib/dialog","core/Teachgroup"],function(dialog,Teachgroup){
-        Teachgroup.init()
+    require(["easyui/easyloader","lib/dialog"],function(){
+        require(["core/Teachgroup"],function(Teachgroup){
+            Teachgroup.init()
+        })
         $('.nyroModal').nyroModal({closeButton: '<a href="#" class="nyroModalClose nyroModalCloseButton nmReposition fa fa-times-circle fa-2x" title="close"></a>'});
     })
 

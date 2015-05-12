@@ -2,7 +2,7 @@
  * Created by Administrator on 2015/4/9.
  * 设置教师组
  */
-define(["easyui/easyloader"],function () {
+define(function () {
 
     var Teachgroup=Teachgroup || {};
 

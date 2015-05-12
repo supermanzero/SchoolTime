@@ -99,6 +99,28 @@ module.exports = function(grunt) {
                     "./assets/js/core/template/course.js": ["./assets/js/core/template/*.hbs"]
                 }
             }
+        },
+        uglify: {
+            options: {
+                //文件内容的分隔符
+                mangle: true,
+                separator: ';',
+                stripBanners: true,
+                banner: '/*' +' Created by <%= pkg.author %> on <%= grunt.template.today("yyyy/mm/dd") %> '+'*/'
+            },
+            build: {
+                files: {
+                    './assets/js/lib/jquery.datetimepicker/jquery.datetimepicker.min.js': ['./assets/js/lib/jquery.datetimepicker/jquery.datetimepicker.js']
+                }
+            },
+            buildall: {//任务三：按原文件结构压缩js文件夹内所有JS文件
+                files: [{
+                    expand:true,
+                    cwd:'js',//js目录下
+                    src:'**/*.js',//所有js文件
+                    dest: 'output/js'//输出到此目录下
+                }]
+            }
         }
 
     });
@@ -108,10 +130,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
     // 注册任务
-    grunt.registerTask('default', ['handlebars']);
+    grunt.registerTask('default', ['uglify:build']);
 //    grunt.registerTask('default', ['watch:hbs']);
 //    grunt.registerTask('default', ['handlebars']);
 };
