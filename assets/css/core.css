@@ -275,7 +275,9 @@ striping:
 .pub-tabs{
     margin-bottom: 20px;
 }
-
+.course-info-hd li.hide{
+    display: none;
+}
 .course-info-hd li{
     margin-left: 20px;
 }
@@ -478,6 +480,8 @@ p.prompt{
     border-top:1px solid #ddd;
 }
 /*teachSet end*/
+
+
 
 /*coursetimeSet*/
 .xdsoft_datetimepicker {
@@ -1026,3 +1030,34 @@ p.prompt{
     /* IE6-9 */
 }
 /*coursetimeSet end*/
+
+/*idleTeach*/
+.teach-table th{
+    width: 100px;
+}
+.teach-table-tab{
+    width: 150px;
+    position: relative;
+    padding: 8px 40px;
+    margin:0px auto 10px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.teach-table-tab a{
+    position: absolute;
+    top: 5px;
+}
+.teach-table-tab a.prev{
+    left: 15px;
+}
+.teach-table-tab a.next{
+    right: 15px;
+}
+.teach-table-tab p span{
+    margin: 0 0 0 10px;
+}
+/*idleTeach end*/

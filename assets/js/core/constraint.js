@@ -1,4 +1,4 @@
-define(["easyui/easyloader","lib/artDialog4/jquery.artDialog"],function(){
+define(["easyui/easyloader","../lib/artDialog4/jquery.artDialog.js"],function(){
     return{
         init: function(){
             this.dialog();

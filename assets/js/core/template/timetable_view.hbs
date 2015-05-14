@@ -1,0 +1,39 @@
+{{#timetable}}
+    {{#unless  activity}}
+        <tr>
+            <td>
+                <p>{{joint}}</p>
+                <p>{{starttime}}-{{endtime}}</p>
+            </td>
+            <td>
+                <p>{{mon.name}}</p>
+                <p select>{{mon.teach}}</p>
+            </td>
+            <td>
+                <p>{{tues.name}}</p>
+                <p select>{{tues.teach}}</p>
+            </td>
+            <td>
+                <p>{{wed.name}}</p>
+                <p select>{{wed.teach}}</p>
+            </td>
+            <td>
+                <p>{{thurs.name}}</p>
+                <p select>{{thurs.teach}}</p>
+            </td>
+            <td>
+                <p>{{fri.name}}</p>
+                <p select>{{fri.teach}}</p>
+            </td>
+        </tr>
+    {{else}}
+        <tr>
+            <td>
+                <p>{{starttime}}-{{endtime}}</p>
+            </td>
+            <td colspan="5">
+                <p>{{activity}}</p>
+            </td>
+        </tr>
+    {{/unless }}
+{{/timetable}}

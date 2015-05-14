@@ -62,7 +62,10 @@
             <div class="cmspages-content-menu-bd">
                 <ul>
                     <li>
-                        <a class="on" href="javascript:void(0)">班级设置</a>
+                        <a class="on" href="javascript:void(0)"><i class="fa fa-calendar fa-2x"></i>排课管理</a>
+                    </li>
+                    <li>
+                        <a class="" href="javascript:void(0)">班级设置</a>
                     </li>
                     <li>
                         <a class="" href="javascript:void(0)">课程设置</a>
@@ -72,9 +75,6 @@
                     </li>
                     <li>
                         <a class="" href="javascript:void(0)">课时设置</a>
-                    </li>
-                    <li>
-                        <a class="" href="javascript:void(0)">课程设置</a>
                     </li>
                 </ul>
             </div>
@@ -93,26 +93,28 @@
                                 <option value="">2014-2015学年上学期</option>
                             </select>
                         </li>
-                        <li class="yui3-u">
+                        <li class="yui3-u tabletype-select">
                             <label class="yui3-u">课程表：</label>
-                            <select name="" id="" class="yui3-u">
-                                <option value="">班级课程表</option>
-                                <option value="">班级课程表</option>
+                            <select name="tabletype" id="" class="yui3-u tabletype">
+                                <option value="0">班级课程表</option>
+                                <option value="1">教师课程表</option>
+                                <option value="2">总课程表</option>
                             </select>
                         </li>
-                        <li class="yui3-u">
-                            <label class="yui3-u">年级：</label>
-                            <select name="" id="" class="yui3-u">
-                                <option value="">一年级</option>
-                                <option value="">二年级</option>
-                            </select>
-                        </li>
-                        <li class="yui3-u">
+                        <li class="yui3-u class-select">
                             <label class="yui3-u">班级：</label>
-                            <select name="" id="" class="yui3-u">
-                                <option value="">1班</option>
-                                <option value="">2班</option>
-                                <option value="">3班</option>
+                            <select name="class" id="" class="yui3-u class">
+                                <option value="">一年级1班</option>
+                                <option value="">一年级2班</option>
+                                <option value="">一年级3班</option>
+                            </select>
+                        </li>
+                        <li class="yui3-u teach-select hide">
+                            <label class="yui3-u">教师：</label>
+                            <select name="teach" id="" class="yui3-u teach">
+                                <option value="">吴老师</option>
+                                <option value="">王老师</option>
+                                <option value="">张老师</option>
                             </select>
                         </li>
                         <li class="yui3-u">
@@ -124,7 +126,7 @@
                     <div class="course-info-bd-tp">
                         <h3>二年级（1）班课程表</h3>
                         <ul class="">
-                            <li class="yui3-u"><a class="yui3-u cp-button" href="#" data-dialog="#timetable">临时调课</a></li>
+                            <li class="yui3-u"><a class="yui3-u cp-button nyroModal" href="#teach-or-course">临时调课</a></li>
                             <li class="yui3-u"><a class="yui3-u cp-button easyui-menubutton" href="#" data-options="menu:'#more-box'">更多操作</a></li>
                         </ul>
                         <div id="more-box" class="menu-content">
@@ -136,249 +138,36 @@
                         </div>
                     </div>
                     <table class="pub-table">
-                    <thead>
-                    <tr>
-                        <th class="yui3-u-1-6">时间</th>
-                        <th class="yui3-u-1-6">周一</th>
-                        <th class="yui3-u-1-6">周二</th>
-                        <th class="yui3-u-1-6">周三</th>
-                        <th class="yui3-u-1-6">周四</th>
-                        <th class="yui3-u-1-6">周五</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                        <thead>
                         <tr>
-                            <td>
-                                <p>7:40-8:00</p>
-                            </td>
-                            <td colspan="5">
-                                <p>早读</p>
-                            </td>
+                            <th class="yui3-u-1-6">时间</th>
+                            <th class="yui3-u-1-6">周一</th>
+                            <th class="yui3-u-1-6">周二</th>
+                            <th class="yui3-u-1-6">周三</th>
+                            <th class="yui3-u-1-6">周四</th>
+                            <th class="yui3-u-1-6">周五</th>
                         </tr>
-                        <tr>
-                            <td>
-                                <p>第一节</p>
-                                <p>8:00-8:45</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第二节</p>
-                                <p>8:55-9:40</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>9:40-10:00</p>
-                            </td>
-                            <td colspan="5">
-                                <p>课间操</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第三节</p>
-                                <p>10:00-10:45</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>10:45-11:05</p>
-                            </td>
-                            <td colspan="5">
-                                <p>眼保健操</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第四节</p>
-                                <p>11:05-11:50</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>11:50-14:00</p>
-                            </td>
-                            <td colspan="5">
-                                <p>午休</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第五节</p>
-                                <p>14:00-14:45</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第六节</p>
-                                <p>14:55-14:45</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>第七节</p>
-                                <p>15:50-16:35</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                            <td>
-                                <p>语文</p>
-                                <p>李晓军</p>
-                            </td>
-                            <td>
-                                <p>数学</p>
-                                <p>张红</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody id="timetable-view">
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="pagination">
-                <a href="">&lt;</a>
-                <a class="on" href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-                <a href="">5</a>
-                <a href="">&gt;</a>
+        </div>
+
+        <!--无排课-->
+        <div class="cmspages-content yui3-u">
+            <div class="blankslate" style="padding: 150px 30px;">
+                <h3 id="this-is-a-blank-slate">您目前还未排课，请点击<a href="#create-table" class="nyroModal">新建排课</a></h3>
+                <p></p>
             </div>
         </div>
+        <!--无排课 end-->
     </div>
 </div>
 
-
+<!--新建排课-->
 <div id="create-table" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -411,7 +200,9 @@
         </div>
     </div>
 </div>
+<!--新建排课 end-->
 
+<!--导出课表-->
 <div id="export-table" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -438,7 +229,9 @@
         </div>
     </div>
 </div>
+<!--导出课表 end-->
 
+<!--临时调课-->
 <div id="teach-or-course" style="display: none">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -463,14 +256,16 @@
                     </li>
                     <li class="yui3-g">
                         <label class="yui3-u"></label>
-                        <button class="yui3-u cp-button">确定</button>
+                        <button class="yui3-u cp-button" data-dialog="#timetable">确定</button>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+<!--临时调课 end-->
 
+<!--手动排课 -->
 <div id="change-teach" style="display: none;">
     <div class="cmspages-dialog">
         <div class="cmspages-dialog-hd">
@@ -492,140 +287,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                        <p>7:40-8:00</p>
-                    </td>
-                    <td colspan="5">
-                        <p>早读</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>第一节</p>
-                        <p>8:00-8:45</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>第二节</p>
-                        <p>8:55-9:40</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>9:40-10:00</p>
-                    </td>
-                    <td colspan="5">
-                        <p>课间操</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>第三节</p>
-                        <p>10:00-10:45</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>10:45-11:05</p>
-                    </td>
-                    <td colspan="5">
-                        <p>眼保健操</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>第四节</p>
-                        <p>11:05-11:50</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                    <td>
-                        <p>语文</p>
-                        <p>李晓军</p>
-                    </td>
-                    <td>
-                        <p>数学</p>
-                        <p>张红</p>
-                    </td>
-                </tr>
                 </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+<!--手动排课 end-->
 
 <!--临时调课-->
 <div id="timetable-dialog" style="position: absolute;top: -9999px;">
@@ -676,6 +344,7 @@
     require(["easyui/easyloader","lib/dialog"],function(){
         require(["core/timetable"],function(timetable){
             timetable.sequence()
+
         })
         $(".tablink").on("click",function(){
             $(this).closest(".export-table").hide()

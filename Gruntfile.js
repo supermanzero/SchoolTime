@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                 tasks: ['concat:css']
             },
             hbs:{
-                files:"./assets/js/core/template/*.handlebars",
+                files:"./assets/js/core/template/*.hbs",
                 tasks:["handlebars"]
             }
         },
@@ -93,7 +93,10 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     namespace: "JST",
-                    amd:true
+                    amd:true,
+                    processName: function(filename) {
+                        return filename.replace(/.*\/(\w+)\.hbs/, '$1');
+                    }
                 },
                 files: {
                     "./assets/js/core/template/course.js": ["./assets/js/core/template/*.hbs"]

@@ -84,18 +84,31 @@
         </div>
         <div class="cmspages-content yui3-u">
             <div class="pub-breadcrumb-wrap mr10">
-                <div class="pub-heading-tips">
-                    <span class="tips">1、新建排课任务<em class="rarr">&rarr;</em>2、添加约束条件<em class="rarr">&rarr;</em>3、自动排课</span>
-                </div>
+                <ul class="yui3-g">
+                    <li class="yui3-u-1-3 on">
+                        <div class="pub-heading-tips">
+                            1 新建排课任务
+                        </div>
+                    </li>
+                    <li class="yui3-u-1-3 on">
+                        <div class="pub-heading-tips">
+                            2 选择排课类型
+                        </div>
+                    </li>
+                    <li class="yui3-u-1-3">
+                        <div class="pub-heading-tips">
+                            3 自动排课
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <p class="add-ctrl"><a href="javascript:void(0);" class="yui3-u cp-button add-btn constraint-btn">添加约束条件</a> 添加约束条件，可以保证排课的高效性，您也可以不添加。</p>
-            <div class="course-info-bd mr10">
-                <table class="pub-table">
+            <div class="course-info-bd mr10 mt20">
+                <table class="pub-table course-type">
                     <thead>
                     <tr>
                         <th width="5%"></th>
-                        <th width="70%">约束信息</th>
-                        <th width="25%">操作</th>
+                        <th width="70%">排课类型</th>
+                        <th width="25%">选择</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -104,11 +117,10 @@
                             1
                         </td>
                         <td>
-                            全校体育课上午不排
+                            小学普通课表
                         </td>
                         <td>
-                            <a class="user-ctrl mr5" href="javascript:void(0);">编辑</a>
-                            <a class="user-ctrl" href="javascript:void(0);">删除</a>
+                            <label><input type="radio" name="course-table" checked/></label>
                         </td>
                     </tr>
                     <tr>
@@ -116,297 +128,60 @@
                             2
                         </td>
                         <td>
-                            全校美术课第1节不排
+                            小学单双周课表
                         </td>
                         <td>
-                            <a class="user-ctrl mr5" href="javascript:void(0);">编辑</a>
-                            <a class="user-ctrl" href="javascript:void(0);">删除</a>
+                            <label><input type="radio" name="course-table"/></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            初中普通课表
+                        </td>
+                        <td>
+                            <label><input type="radio" name="course-table"/></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            高中普通课表
+                        </td>
+                        <td>
+                            <label><input type="radio" name="course-table"/></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            高中单双周课表
+                        </td>
+                        <td>
+                            <label><input type="radio" name="course-table"/></label>
                         </td>
                     </tr>
                     </tbody>
                 </table>
+                <div class="footer-btn-box">
+                    <a href="" class="yui3-u cp-button mr10">上一步</a>
+                    <button class="yui3-u cp-button">开始排课</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
-<div id="add-class" style="display: none">
-    <div class="cmspages-dialog">
-        <div class="cmspages-dialog-hd">
-            <h3>新增班级</h3>
-        </div>
-        <div class="cmspages-dialog-bd">
-            <div class="course-dialog add-class">
-                <ul class="cmspages-dialog-bind-account">
-                    <li class="yui3-g">
-                        <label class="yui3-u">班级名称：</label>
-                        <input type="text" name="" class="easyui-validatebox" data-options="required:true,missingMessage:'不能为空'"/>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u">班级名称：</label>
-                        <select name="" id="" class="yui3-u">
-                            <option value="">一年级</option>
-                            <option value="">二年级</option>
-                            <option value="">三年级</option>
-                        </select>
-                    </li>
-                    <li class="yui3-g">
-                        <label class="yui3-u ff"></label>
-                        <input class="yui3-u cp-button" type="submit" value="新增">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 添加约束条件 start -->
-<div id="constraint" class="none">
-    <div class="dialog-box">
-        <div class="dialog-body">
-            <div class="pub-tabs">
-                <ul class="yui3-g tab-menu">
-                    <li class="yui3-u tab-menu-list active"><a href="javascript:void(0)">各天限制</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">时段限制</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">禁止同时上课</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">禁止科目相邻</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">统一课设置</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">连堂课</a></li>
-                </ul>
-            </div>
-            <div class="tab-content">
-                <!-- 各天限制 start -->
-                <div class="tab-box">
-                    <form method="" action="" style="padding-left: 8px;">
-                        <a href="javascript:void(0);" class="yui3-u cp-button mr10 choose-obj">选择对象</a>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">每天</option>
-                            <option value="">周一</option>
-                        </select>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">最多排</option>
-                            <option value="">最少排</option>
-                            <option value="">不拍</option>
-                        </select>
-                        <select name="" id="" class="yui3-u select-menu">
-                            <option value="">第1节</option>
-                            <option value="">第2节</option>
-                        </select>
-                    </form>
-                </div>
-                <!-- 各天限制 end -->
-
-                <!-- 时段限制 start -->
-                <div class="tab-box none">
-                    <form method="" action="" style="padding-left: 8px;">
-                        <a href="javascript:void(0);" class="yui3-u cp-button mr10 choose-obj">选择对象</a>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">上午</option>
-                            <option value="">下午</option>
-                            <option value="">第1节</option>
-                            <option value="">第2节</option>
-                        </select>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">固定排</option>
-                            <option value="">最多排</option>
-                            <option value="">最少排</option>
-                            <option value="">不拍</option>
-                        </select>
-                        <select name="" id="" class="yui3-u select-menu">
-                            <option value="">1次</option>
-                            <option value="">2次</option>
-                        </select>
-                    </form>
-                </div>
-                <!-- 时段限制 end -->
-
-                <!-- 禁止同时上课 start -->
-                <div class="tab-box none">
-                    <div class="pub-tabs">
-                        <ul class="yui3-g tab-menu sub-menu">
-                            <li class="yui3-u tab-menu-list active"><a href="javascript:void(0)">禁止教师同时上课</a></li>
-                            <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">禁止科目同时上课</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <!-- 禁止教师同时上课 start -->
-                        <div class="tab-box">
-                            <form method="" action="" style="padding-left: 90px;">
-                                <select name="" id="" class="yui3-u select-menu mr10">
-                                    <option value="">张三</option>
-                                    <option value="">张三</option>
-                                    <option value="">张三</option>
-                                    <option value="">张三</option>
-                                </select>
-                                <select name="" id="" class="yui3-u select-menu mr10">
-                                    <option value="">王五</option>
-                                    <option value="">王五</option>
-                                    <option value="">王五</option>
-                                    <option value="">王五</option>
-                                </select>
-                                <strong class="strong-tips">不同时上课</strong>
-                            </form>
-                        </div>
-                        <!-- 禁止教师同时上课 end -->
-
-                        <!-- 禁止科目同时上课 start -->
-                        <div class="tab-box none">
-                            <form method="" action="" style="padding-left: 22px;">
-                                <select name="" id="" class="yui3-u select-menu mr10">
-                                    <option value="">数学</option>
-                                    <option value="">语文</option>
-                                </select>
-                                <select name="" id="" class="yui3-u select-menu mr10">
-                                    <option value="">数学</option>
-                                    <option value="">语文</option>
-                                </select>
-                                <strong class="strong-tips mr10">不同时排在</strong>
-                                <select name="" id="" class="yui3-u select-menu">
-                                    <option value="">同一个上午</option>
-                                    <option value="">同一个下午</option>
-                                    <option value="">同一天</option>
-                                </select>
-                            </form>
-                        </div>
-                        <!-- 禁止科目同时上课 end -->
-                    </div>
-
-                </div>
-                <!-- 禁止同时上课 end -->
-
-                <!-- 禁止科目相邻 start -->
-                <div class="tab-box none">
-                    <form method="" action="" style="padding-left: 80px;">
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">数学</option>
-                            <option value="">语文</option>
-                        </select>
-                        <strong class="strong-tips mr10">不排在</strong>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">数学</option>
-                            <option value="">语文</option>
-                        </select>
-                        <strong class="strong-tips">前面</strong>
-                    </form>
-                </div>
-                <!-- 禁止科目相邻 end -->
-
-                <!-- 统一课设置 start -->
-                <div class="tab-box none">
-                    <p class="tc mb20"><a href="#constraint" class="yui3-u cp-button mr10 choose-school">选择学校</a></p>
-                    <form method="" action="" style="padding-left: 45px">
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">每天</option>
-                            <option value="">周一</option>
-                            <option value="">周二</option>
-                        </select>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">上午</option>
-                            <option value="">下午</option>
-                            <option value="">第1节</option>
-                            <option value="">第2节</option>
-                        </select>
-                        <strong class="strong-tips mr10">设定为</strong>
-                        <input class="input-control save-input" type="text" placeholder="自习">
-                    </form>
-                </div>
-                <!-- 统一课设置 end -->
-
-                <!-- 连堂课 start -->
-                <div class="tab-box none">
-                    <form method="" action="" style="padding-left: 120px;">
-                        <a href="#constraint" class="yui3-u cp-button mr10 choose-obj">选择对象</a>
-                        <strong class="strong-tips mr10">连堂</strong>
-                        <select name="" id="" class="yui3-u select-menu mr10">
-                            <option value="">1次</option>
-                            <option value="">2次</option>
-                        </select>
-                    </form>
-                </div>
-                <!-- 连堂课 end -->
-            </div>
-            <div class="dialog-footer fr mt15 mb15">
-                <a href="javascript:void(0)" class="yui3-u cp-button">添加</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 添加约束条件 end -->
-
-<!--选择对象 start-->
-<div id="object" class="none">
-    <div class="dialog-box">
-        <div class="dialog-body">
-            <div class="pub-tabs">
-                <ul class="yui3-g tab-menu">
-                    <li class="yui3-u tab-menu-list active"><a href="javascript:void(0)">科目</a></li>
-                    <li class="yui3-u tab-menu-list"><a href="javascript:void(0)">教师</a></li>
-                </ul>
-            </div>
-            <div class="tab-content">
-                <!-- 科目 start-->
-                <div class="tab-box">
-                    <div class="obj-box grade-box">
-                        <h3 class="heading">选择班级</h3>
-                        <div class="choose-box">
-                            <ul id="grade" class="easyui-tree" checkbox="true"></ul>
-                        </div>
-                    </div>
-                    <div class="obj-box subject-box">
-                        <h3 class="heading">选择班级</h3>
-                        <div class="choose-box">
-                            <ul id="sbubject" class="easyui-tree" checkbox="true"></ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- 科目 end-->
-                <!-- 教师 start-->
-                <div class="tab-box none">
-                    <div class="teacher-box subject-box">
-                        <h3 class="heading">选择班级</h3>
-                        <div class="choose-box">
-                            <ul id="teacher" class="easyui-tree" checkbox="true"></ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- 教师 end-->
-            </div>
-            <div class="clear"></div>
-            <div class="dialog-footer fr mt15 mb15">
-                <a href="javascript:void(0)" class="yui3-u cp-button mr5">确定</a>
-                <a href="javascript:void(0)" class="yui3-u default-button exitBnt">取消</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--选择对象 end-->
-
-<!-- 选择学校 start-->
-<div id="school" class="none">
-    <div class="dialog-box">
-            <div class="dialog-body">
-                <div class="obj-box grade-box">
-                    <div class="choose-box">
-                        <ul id="class" class="easyui-tree" checkbox="true"></ul>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <div class="dialog-footer fr mt15 mb15">
-                <a href="javascript:void(0)" class="yui3-u cp-button mr5">确定</a>
-                <a href="javascript:void(0)" class="yui3-u default-button exitBnt">取消</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 选择学校 end-->
 
 <script src="../assets/js/lib/jquery.js"></script>
 <script src="../assets/js/require.js"></script>
 <script>
-    require(['constraint'],function(constraint){
-        constraint.init();
-    });
+    require(["easyui/easyloader"])
 </script>
 </body>
 </html>
